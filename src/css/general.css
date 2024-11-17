@@ -1,0 +1,4 @@
+.vector-image-container {
+  position: relative;
+  background: url("../assets/vector.png") no-repeat center center / cover;
+}
