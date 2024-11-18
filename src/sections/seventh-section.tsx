@@ -20,7 +20,7 @@ const SeventhSection: React.FC = () => {
         <h2 className="text-3xl text-gray-800">
           H2 Lorem Ipsum <strong className="italic">Dolor</strong>
         </h2>
-        <div className="grid grid-cols-3 px-8 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           <div className="col-span-2 space-y-1">
             <h1 className="font-medium">Client Stories</h1>
             <p className="text-gray-600 text-sm">
@@ -92,7 +92,7 @@ const Card = ({ image, title }: CardProps) => {
         </p>
         <div className="flex items-center gap-x-2 text-sm font-medium absolute bottom-6">
           <span>View Full Case Study</span>
-          <span className="pt-1.5">
+          <span className="pt-0.5">
             <FaCaretRight />
           </span>
         </div>
@@ -104,7 +104,7 @@ const Card = ({ image, title }: CardProps) => {
       {/* Content Overlay */}
       <div className="flex flex-col justify-between p-6 z-10 cursor-pointer">
         <div>
-          <h3 className="text-2xl font-semibold">{title}</h3>
+          <h3 className="text-2xl">{title}</h3>
         </div>
         <motion.div
           onClick={isGradientUp ? handleHoverEnd : handleHoverStart}

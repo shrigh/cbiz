@@ -1,12 +1,41 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Group from "../assets/Group.png";
 import { Button } from "@/components/ui/button";
+import Footer from "./footer-section";
 
 const EightSection: React.FC = () => {
+  // Hook to track the section's visibility
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+
+  // Trigger animation when in view
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [inView, controls]);
+
+  // Motion Variants for the reveal animation
+  const containerVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
     <>
-      <div className="space-y-3 px-40 py-20 font-thin second-gradient text-white relative overflow-hidden h-[217px] w-full group">
+      <motion.div
+        ref={ref}
+        className="space-y-3 px-36 py-20 font-thin second-gradient text-white relative overflow-hidden h-[217px] w-full group"
+        variants={containerVariants}
+        initial="hidden"
+        animate={controls}
+      >
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl">Full Width CTA</h1>
@@ -52,7 +81,8 @@ const EightSection: React.FC = () => {
             className="absolute right-36 bottom-0 w-[36rem]"
           />
         </div>
-      </div>
+      </motion.div>
+      <Footer />
     </>
   );
 };

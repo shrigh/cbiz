@@ -113,11 +113,11 @@ const FourthSection: React.FC = () => {
                     alt={article.type}
                     className="object-cover w-[180px] h-[120px] rounded-xl"
                   />
-                  <div className="text-xs space-y-1">
+                  <div className="text-xs space-y-1.5">
                     <p className=" text-[#005CFF] font-medium">
                       {article.type}
                     </p>
-                    <h4 className=" font-semibold text-[#001242]">
+                    <h4 className=" font-medium text-[1rem] text-[#001242]">
                       {article.title}
                     </h4>
                     <p className=" text-[#575C5F] line-clamp-2">

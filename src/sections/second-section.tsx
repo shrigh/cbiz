@@ -8,7 +8,6 @@ import FourthSection from "./fourth-sections";
 import FifthSection from "./fifth-section";
 import SixthSection from "./sixth-section";
 import SeventhSection from "./seventh-section";
-import EightSection from "./eight-section";
 import Footer from "./footer-section";
 
 const SecondSection: React.FC = () => {
@@ -75,7 +74,6 @@ const SecondSection: React.FC = () => {
           <FifthSection />
           <SixthSection />
           <SeventhSection />
-          <EightSection />
           <Footer />
         </div>
       </div>

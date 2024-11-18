@@ -75,18 +75,18 @@ const FifthSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-10">
         {cards.map((card, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
-              delay: index * 0.3,
-              duration: 0.7,
+              delay: index * 0.5, // Delay between each card
+              duration: 0.8,
               ease: "easeOut",
             }}
-            className="w-[250px] will-change-transform"
+            className="w-[240px] will-change-transform"
           >
             <Card {...card} />
           </motion.div>
@@ -101,38 +101,46 @@ export default FifthSection;
 const Card = ({ title, description, image }: CardProps) => {
   return (
     <motion.div
-      className="relative w-[250px] h-[450px] flex flex-col items-center justify-end p-6 font-thin"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+      className="relative w-[240px] h-[450px] flex flex-col items-center justify-end p-6 font-thin"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+      }}
     >
-      {/* Image as the background */}
+      {/* Background Image */}
       <motion.img
         src={image}
         alt={title}
-        className="absolute top-0 left-0 w-full h-full object-cover will-change-transform"
+        className="absolute top-0 left-0 w-full h-full object-cover"
         loading="lazy"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       />
 
       {/* Gradient Overlay */}
       <motion.div
-        className="absolute top-0 left-0 w-full h-full bg-custom-gradient from-transparent via-[#00124266] to-[#001242] z-10"
+        className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#001242] to-transparent z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       />
 
-      {/* Content */}
-      <div className="relative z-20 text-white">
+      {/* Card Content */}
+      <motion.div
+        className="relative z-20 text-white text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <h3 className="text-lg">{title}</h3>
         <p className="text-sm my-2">{description}</p>
         <Button className="mt-4 px-4 py-2 bg-[#04773B] hover:bg-[#04773B] font-normal h-9">
           Call to Action
         </Button>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
