@@ -4,6 +4,12 @@ import Img from "../assets/h3.jpg";
 import PlayButton from "../assets/play-button.png";
 import { motion } from "framer-motion";
 import ThirdSection from "./third-section";
+import FourthSection from "./fourth-sections";
+import FifthSection from "./fifth-section";
+import SixthSection from "./sixth-section";
+import SeventhSection from "./seventh-section";
+import EightSection from "./eight-section";
+import Footer from "./footer-section";
 
 const SecondSection: React.FC = () => {
   return (
@@ -12,10 +18,10 @@ const SecondSection: React.FC = () => {
         <div className="main vector-image-container">
           <div className="pl-[8.5%] flex py-32">
             <div className="font-thin">
-              <h1 className="text-4xl font-light mb-4">
+              <h1 className="text-4xl font-light mb-4 text-[#001242]">
                 Vedio Lorem <strong className="italic">Ipsum</strong>
               </h1>
-              <p className="mb-6">
+              <p className="mb-6 text-[#575C5F]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
                 impedit aliquid tenetur enim officia cum molestiae.
               </p>
@@ -62,7 +68,15 @@ const SecondSection: React.FC = () => {
               </div>
             </motion.div>
           </div>
+
+          {/* all sections */}
           <ThirdSection />
+          <FourthSection />
+          <FifthSection />
+          <SixthSection />
+          <SeventhSection />
+          <EightSection />
+          <Footer />
         </div>
       </div>
     </>
