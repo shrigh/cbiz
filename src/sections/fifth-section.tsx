@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
-
+import React, { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
 
 interface CardProps {
   title: string;
@@ -70,21 +70,12 @@ const FifthSection: React.FC = () => {
         </div>
       </div>
 
+      {/* Cards Section */}
       <div className="flex justify-center mt-10">
         {cards.map((card, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{
-              delay: index * 0.5,
-              duration: 0.8,
-              ease: "easeOut",
-            }}
-            className="w-auto"
-          >
+          <Fade delay={index * 500} key={index}>
             <Card {...card} />
-          </motion.div>
+          </Fade>
         ))}
       </div>
     </div>
@@ -94,8 +85,24 @@ const FifthSection: React.FC = () => {
 export default FifthSection;
 
 const Card = ({ title, description, image }: CardProps) => {
+  const gradientRef = useRef<HTMLDivElement>(null);
+
+  const handleHoverStart = () => {
+    if (gradientRef.current) {
+      gradientRef.current.style.transform = "translateY(0%)";
+    }
+  };
+
+  const handleHoverEnd = () => {
+    if (gradientRef.current) {
+      gradientRef.current.style.transform = "translateY(100%)";
+    }
+  };
   return (
-    <div className="relative w-auto h-[450px] flex flex-col items-center justify-end p-6 font-thin">
+    <motion.div
+      ref={gradientRef}
+      className="relative group w-auto h-[450px] flex flex-col items-center justify-end p-6 font-thin overflow-hidden cursor-pointer"
+    >
       {/* Background Image */}
       <img
         src={image}
@@ -107,19 +114,26 @@ const Card = ({ title, description, image }: CardProps) => {
       {/* Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient z-10" />
 
-      {/* Card Content */}
+      {/* Hover Gradient Overlay */}
       <motion.div
-        className="relative z-50 text-white"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        onHoverStart={handleHoverStart}
+        onHoverEnd={handleHoverEnd}
+        style={{
+          transition: "bottom 0.5s ease-in-out",
+        }}
+        className="absolute top-0 left-0 inset-0 card-gradient text-white p-4 font-bold text-2xl border-2 border-red-500"
       >
-        <h3 className="text-lg font-normal">{title}</h3>
-        <p className="text-sm my-2">{description}</p>
-        <Button className="mt-4 px-4 py-2 bg-[#04773B] hover:bg-[#04773B] font-normal h-9">
+        hi
+      </motion.div>
+
+      {/* Card Content */}
+      <div className="relative z-20 text-white">
+        <h3 className="text-lg font-medium">{title}</h3>
+        <p className="text-sm mt-2 mb-4">{description}</p>
+        <Button className="px-4 py-2 bg-[#04773B] hover:bg-[#04773B] font-medium">
           Call to Action
         </Button>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };

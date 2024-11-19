@@ -5,11 +5,6 @@ import {
   SelectTrigger,
 } from "@/components/ui/select";
 import React from "react";
-import Img_main from "../assets/img6.jpg";
-import Img1 from "../assets/img1.jpg";
-import Img2 from "../assets/img2.jpg";
-import Img3 from "../assets/img4.jpg";
-import Img4 from "../assets/img5.jpg";
 
 const Dropdown = ({ placeholder }: { placeholder: string }) => {
   return (
@@ -107,7 +102,7 @@ const FourthSection: React.FC = () => {
               {articles.map((article) => (
                 <div
                   key={article.id}
-                  className="flex items-start space-x-4 mb-4"
+                  className="flex items-start space-x-4 border-2 border-transparent hover:border-slate-400 cursor-pointer p-3 hover:rounded-xl"
                 >
                   <img
                     src={article.image}
