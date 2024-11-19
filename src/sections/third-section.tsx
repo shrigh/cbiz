@@ -14,7 +14,7 @@ const ThirdSection: React.FC = () => {
             {/* Image */}
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img
-                src={Img}
+                src="/assets/h3.jpg"
                 alt="Group discussion"
                 className="w-full h-full object-cover"
               />
@@ -38,13 +38,21 @@ const ThirdSection: React.FC = () => {
               </p>
               <ul className="space-y-4 text-[#575C5F]">
                 <li className="flex items-start gap-4">
-                  <img src={Tick} alt="tick.." className="w-3 h-3 mt-2" />
+                  <img
+                    src="/assets/tick.png"
+                    alt="tick.."
+                    className="w-3 h-3 mt-2"
+                  />
                   <p className="text-gray-600">
                     Lorem ipsum dolor sit amet, consectetur
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
-                  <img src={Tick} alt="tick.." className="w-3 h-3 mt-2" />
+                  <img
+                    src="/assets/tick.png"
+                    alt="tick.."
+                    className="w-3 h-3 mt-2"
+                  />
                   <p className="text-gray-600">
                     Sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                     labore et dolore aliquyam erat, sed diam voluptua.
@@ -56,8 +64,14 @@ const ThirdSection: React.FC = () => {
                   Learn More
                 </Button>
                 <div className="bg-transparent flex items-center space-x-2 px-6">
-                  <span className="text-sm font-medium text-[#001242]">Call to Action</span>
-                  <img src={Polygon2} alt="loading.." className="pt-1" />
+                  <span className="text-sm font-medium text-[#001242]">
+                    Call to Action
+                  </span>
+                  <img
+                    src="/assets/polygon2.png"
+                    alt="loading.."
+                    className="pt-1"
+                  />
                 </div>
               </div>
             </div>
@@ -83,13 +97,21 @@ const ThirdSection: React.FC = () => {
               </p>
               <ul className="space-y-4 text-[#575C5F]">
                 <li className="flex items-start gap-4">
-                  <img src={Tick} alt="tick.." className="w-3 h-3 mt-2" />
+                  <img
+                    src="/assets/tick.png"
+                    alt="tick.."
+                    className="w-3 h-3 mt-2"
+                  />
                   <p className="text-gray-600">
                     Lorem ipsum dolor sit amet, consectetur
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
-                  <img src={Tick} alt="tick.." className="w-3 h-3 mt-2" />
+                  <img
+                    src="/assets/tick.png"
+                    alt="tick.."
+                    className="w-3 h-3 mt-2"
+                  />
                   <p className="text-gray-600">
                     Sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                     labore et dolore aliquyam erat, sed diam voluptua.
@@ -101,8 +123,14 @@ const ThirdSection: React.FC = () => {
                   Learn More
                 </Button>
                 <div className="bg-transparent flex items-center space-x-2 px-6">
-                  <span className="text-sm font-medium text-[#001242]">Call to Action</span>
-                  <img src={Polygon2} alt="loading.." className="pt-1" />
+                  <span className="text-sm font-medium text-[#001242]">
+                    Call to Action
+                  </span>
+                  <img
+                    src="/assets/polygon2.png"
+                    alt="loading.."
+                    className="pt-1"
+                  />
                 </div>
               </div>
             </div>
@@ -110,13 +138,13 @@ const ThirdSection: React.FC = () => {
             {/* Image with Play Button */}
             <div className="relative">
               <img
-                src={Img}
+                src="/assets/h3.jpg"
                 alt="Businessman"
                 className="rounded-lg w-full h-full object-cover shadow-lg"
               />
               {/* Play Button */}
               <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer w-14">
-                <img src={PlayButton} alt="playButton.." />
+                <img src="/assets/play-button.png" alt="playButton.." />
               </div>
             </div>
           </div>

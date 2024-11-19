@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import Img from "../assets/h3.jpg";
-import PlayButton from "../assets/play-button.png";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import ThirdSection from "./third-section";
 import FourthSection from "./fourth-sections";
 import FifthSection from "./fifth-section";
@@ -11,11 +9,17 @@ import SeventhSection from "./seventh-section";
 import Footer from "./footer-section";
 
 const SecondSection: React.FC = () => {
+  // Ref for tracking the animated container
+  const ref = useRef(null);
+
+  // Check if the container is in view
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -50px 0px" });
+
   return (
     <>
-      <div className="relative w-full">
+      <motion.div ref={ref} className="relative w-full">
         <div className="main vector-image-container">
-          <div className="pl-[8.5%] flex py-32">
+          <div className="pl-[8.5%] flex py-24 space-x-8">
             <div className="font-thin">
               <h1 className="text-4xl font-light mb-4 text-[#001242]">
                 Vedio Lorem <strong className="italic">Ipsum</strong>
@@ -31,44 +35,37 @@ const SecondSection: React.FC = () => {
 
             {/* Animated Image Container */}
             <motion.div
-              className="relative"
-              variants={{
-                hidden: {
-                  scale: 0.01,
-                  opacity: 0,
-                  x: "100%",
-                  y: "100%",
-                },
-                visible: {
-                  scale: 1,
-                  opacity: 1,
-                  x: "0%",
-                  y: "0%",
-                },
+              className="relative overflow-hidden"
+              initial={{
+                clipPath: "polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%)",
               }}
-              initial="hidden"
-              animate="visible"
+              animate={
+                isInView
+                  ? { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }
+                  : {}
+              }
               transition={{
-                duration: 1.5,
+                duration: 2,
                 ease: [0.83, 0, 0.17, 1],
               }}
             >
               {/* Image */}
               <div className="w-full relative">
                 <img
-                  src={Img}
+                  src="/assets/h3.jpg"
                   alt="image.."
                   className="rounded-l-lg w-full h-full object-cover"
                 />
                 {/* Play Button */}
                 <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-                  <img src={PlayButton} alt="playButton.." />
+                  <img src="/assets/play-button.png" alt="playButton.." />
                 </div>
               </div>
             </motion.div>
           </div>
-
-          {/* all sections */}
+        </div>
+        <div className="bg-[#fcfaf7]">
+          {/* All sections */}
           <ThirdSection />
           <FourthSection />
           <FifthSection />
@@ -76,7 +73,7 @@ const SecondSection: React.FC = () => {
           <SeventhSection />
           <Footer />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

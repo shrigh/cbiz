@@ -33,21 +33,21 @@ const FourthSection: React.FC = () => {
       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor.",
-      image: Img4,
+      image: "/assets/img5.jpg",
     },
     {
       id: 2,
       type: "REPORT",
       title: "Lorem ipsum dolor sit amet, on diam etur elitr.",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: Img3,
+      image: "/assets/img4.jpg",
     },
     {
       id: 3,
       type: "WHITEPAPER",
       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: Img2,
+      image: "/assets/img2.jpg",
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ const FourthSection: React.FC = () => {
       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor.",
-      image: Img1,
+      image: "/assets/img1.jpg",
     },
   ];
   return (
@@ -80,9 +80,10 @@ const FourthSection: React.FC = () => {
             <div className="w-2/3">
               <div className="overflow-hidden">
                 <img
-                  src={Img_main}
+                  src="/assets/img6.jpg"
                   alt="Main Article"
                   className="w-full h-[400px] object-cover rounded-xl shadow-md"
+                  loading="lazy"
                 />
                 <div className="py-6">
                   <p className="text-xs text-[#005CFF] font-semibold">
@@ -112,6 +113,7 @@ const FourthSection: React.FC = () => {
                     src={article.image}
                     alt={article.type}
                     className="object-cover w-[180px] h-[120px] rounded-xl"
+                    loading="lazy"
                   />
                   <div className="text-xs space-y-1.5">
                     <p className=" text-[#005CFF] font-medium">

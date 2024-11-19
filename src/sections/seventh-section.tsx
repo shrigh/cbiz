@@ -6,17 +6,14 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import Img1 from "../assets/img1.jpg";
-import Img2 from "../assets/c2.jpg";
-import Img3 from "../assets/c1.jpg";
+
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FaCaretRight } from "react-icons/fa6";
-import Group from "../assets/Group.png";
 
 const SeventhSection: React.FC = () => {
   return (
     <>
-      <div className="min-h-screen font-thin flex flex-col items-center gap-8 py-10 w-5/6 m-auto">
+      <div className="min-h-screen font-thin flex flex-col items-center gap-8 py-16 w-5/6 m-auto">
         <h2 className="text-3xl text-gray-800">
           H2 Lorem Ipsum <strong className="italic">Dolor</strong>
         </h2>
@@ -39,9 +36,18 @@ const SeventhSection: React.FC = () => {
         </div>
 
         <div className="flex gap-6">
-          <Card image={Img1} title="Lorem Ipsum Dolor Case Study Title" />
-          <Card image={Img3} title="Lorem Ipsum Dolor Case Study Title" />
-          <Card image={Img2} title="Lorem Ipsum Dolor Case Study Title" />
+          <Card
+            image="/assets/img1.jpg"
+            title="Lorem Ipsum Dolor Case Study Title"
+          />
+          <Card
+            image="/assets/c1.jpg"
+            title="Lorem Ipsum Dolor Case Study Title"
+          />
+          <Card
+            image="/assets/c2.jpg"
+            title="Lorem Ipsum Dolor Case Study Title"
+          />
         </div>
       </div>
     </>
@@ -97,7 +103,7 @@ const Card = ({ image, title }: CardProps) => {
           </span>
         </div>
         <div className="absolute">
-          <img src={Group} alt="lines.." />
+          <img src="/assets/Group.png" alt="lines.." />
         </div>
       </div>
 

@@ -1,5 +1,13 @@
+.first-section-gradient {
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
 .vector-image-container {
-  position: relative;
   background: url("../assets/vector.png") no-repeat center center / cover;
 }
 
@@ -19,4 +27,7 @@
 
 .footer-gradient {
   background: linear-gradient(180deg, #001242 0%, #004775 211.41%);
+}
+.custom-height {
+  height: calc(100vh - 15rem);
 }

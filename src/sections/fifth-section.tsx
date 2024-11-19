@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Accounting from "../assets/accounting.jpg";
-import Tax from "../assets/tax.jpg";
-import Advisory from "../assets/advisory.jpg";
-import Benefits from "../assets/benefits.jpg";
-import Insurance from "../assets/insurance.jpg";
-import Technology from "../assets/technology.jpg";
+
 import { Button } from "@/components/ui/button";
 
 interface CardProps {
@@ -20,37 +15,37 @@ const FifthSection: React.FC = () => {
       title: "Accounting",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: Accounting,
+      image: "/assets/accounting.jpg",
     },
     {
       title: "Tax",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: Tax,
+      image: "/assets/tax.jpg",
     },
     {
       title: "Advisory",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: Advisory,
+      image: "/assets/advisory.jpg",
     },
     {
       title: "Benefits",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: Benefits,
+      image: "/assets/benefits.jpg",
     },
     {
       title: "Insurance",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: Insurance,
+      image: "/assets/insurance.jpg",
     },
     {
       title: "Technology",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: Technology,
+      image: "/assets/technology.jpg",
     },
   ];
 
@@ -82,11 +77,11 @@ const FifthSection: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
-              delay: index * 0.5, // Delay between each card
+              delay: index * 0.5,
               duration: 0.8,
               ease: "easeOut",
             }}
-            className="w-[240px] will-change-transform"
+            className="w-auto"
           >
             <Card {...card} />
           </motion.div>
@@ -100,47 +95,31 @@ export default FifthSection;
 
 const Card = ({ title, description, image }: CardProps) => {
   return (
-    <motion.div
-      className="relative w-[240px] h-[450px] flex flex-col items-center justify-end p-6 font-thin"
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-      }}
-    >
+    <div className="relative w-auto h-[450px] flex flex-col items-center justify-end p-6 font-thin">
       {/* Background Image */}
-      <motion.img
+      <img
         src={image}
         alt={title}
         className="absolute top-0 left-0 w-full h-full object-cover"
         loading="lazy"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
       />
 
       {/* Gradient Overlay */}
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#001242] to-transparent z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      />
+      <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient z-10" />
 
       {/* Card Content */}
       <motion.div
-        className="relative z-20 text-white text-center"
+        className="relative z-50 text-white"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h3 className="text-lg">{title}</h3>
+        <h3 className="text-lg font-normal">{title}</h3>
         <p className="text-sm my-2">{description}</p>
         <Button className="mt-4 px-4 py-2 bg-[#04773B] hover:bg-[#04773B] font-normal h-9">
           Call to Action
         </Button>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };

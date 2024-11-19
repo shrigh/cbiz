@@ -36,7 +36,7 @@ const SixthSection: React.FC = () => {
         initial="hidden"
         animate={controls}
       >
-        <div className="main font-thin mb-6">
+        <div className="main font-thin my-12">
           <div className="grid grid-cols-2">
             {/* First Box */}
             <div className="space-y-3 px-40 py-10 first-gradient relative overflow-hidden group">
@@ -55,7 +55,7 @@ const SixthSection: React.FC = () => {
               <div className="absolute top-0 left-0 w-full h-full">
                 {/* Motion Image with Initial Hidden and Scale on Hover */}
                 <motion.img
-                  src={Lines}
+                  src="/assets/lines.png"
                   alt="lines.."
                   animate={{
                     opacity: 1,
@@ -101,7 +101,7 @@ const SixthSection: React.FC = () => {
               <div className="absolute top-0 left-0 w-full h-full">
                 {/* Motion Image with Initial Hidden and Scale on Hover */}
                 <motion.img
-                  src={Group}
+                  src="/assets/Group.png"
                   alt="lines.."
                   animate={{
                     opacity: 1,

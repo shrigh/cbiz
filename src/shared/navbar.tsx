@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import Phone from "../assets/phone.png";
-import User from "../assets/user.png";
-import Search from "../assets/search.png";
 import { Button } from "@/components/ui/button";
-import Logo from "../assets/cbig-logo.png";
 import { X } from "lucide-react";
-import Polygon from "../assets/polygon.png";
 import FirstSection from "@/sections/first-section";
+import SectionOne from "@/sections/section-one";
 
 const Navbar: React.FC = () => {
   const [show, setShow] = useState(true);
@@ -18,7 +14,7 @@ const Navbar: React.FC = () => {
           <section className="border-b">
             <div className="w-5/6 h-12 m-auto flex space-x-10 justify-end items-center text-sm font-light text-[#001242]">
               <div className="flex gap-x-2 items-center">
-                <img src={Phone} alt="loading.." />
+                <img src="/assets/phone.png" alt="loading.." />
                 <span className="">800.123.4567</span>
               </div>
               <span className="cursor-pointer">Pay Bill</span>
@@ -27,11 +23,11 @@ const Navbar: React.FC = () => {
               <span className="cursor-pointer">Events</span>
               <span className="cursor-pointer">Locations</span>
               <div className="flex gap-x-1 items-center">
-                <img src={User} alt="user.." />
+                <img src="/aasets/user.png" alt="user.." />
                 <span className="">Log In</span>
               </div>
               <div className="">
-                <img src={Search} alt="search.." />
+                <img src="/assets/search.png" alt="search.." />
               </div>
             </div>
           </section>
@@ -40,7 +36,7 @@ const Navbar: React.FC = () => {
           <section>
             <div className="flex justify-between items-center w-5/6 m-auto h-20 text-[#001242]">
               <div className="w-28">
-                <img src={Logo} alt="logo.." />
+                <img src="/assets/cbig-logo.png" alt="logo.." />
               </div>
               <div className="flex space-x-10 items-center">
                 <span className="cursor-pointer">Services</span>
@@ -67,7 +63,7 @@ const Navbar: React.FC = () => {
                 <div className="text-sm flex items-center gap-x-2">
                   <span>Call to Action</span>
                   <img
-                    src={Polygon}
+                    src="/assets/polygon.png"
                     alt="polygon.."
                     className="cursor-pointer"
                   />
@@ -82,7 +78,8 @@ const Navbar: React.FC = () => {
           )}
 
           {/* first section */}
-          <FirstSection />
+          <SectionOne />
+          {/* <FirstSection /> */}
         </div>
       </div>
     </>
