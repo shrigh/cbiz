@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
               <span className="cursor-pointer">Events</span>
               <span className="cursor-pointer">Locations</span>
               <div className="flex gap-x-1 items-center">
-                <img src="/aasets/user.png" alt="user.." />
+                <img src="/assets/user.png" alt="user.." />
                 <span className="">Log In</span>
               </div>
               <div className="">
