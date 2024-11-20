@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import FirstSection from "@/sections/first-section";
-import SectionOne from "@/sections/section-one";
+import SectionOne from "../sections/section-one";
 
 const Navbar: React.FC = () => {
   const [show, setShow] = useState(true);

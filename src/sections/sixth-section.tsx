@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Lines from "../assets/lines.png";
-import Group from "../assets/Group.png";
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
