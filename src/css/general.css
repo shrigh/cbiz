@@ -20,6 +20,15 @@
 }
 
 .card-gradient {
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 20.06%,
+    #001242 77.76%
+  );
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+.client-card-gradient {
   background: linear-gradient(111.08deg, #001242 20.88%, #bbcdf9 171.35%);
   transform: translateY(100%);
   transition: transform 0.5s ease-in-out;
@@ -30,4 +39,11 @@
 }
 .custom-height {
   height: calc(100vh - 15rem);
+}
+
+.line-clamp-14 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 14;
 }

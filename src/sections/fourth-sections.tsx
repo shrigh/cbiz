@@ -56,7 +56,7 @@ const FourthSection: React.FC = () => {
   return (
     <>
       <div className="fourth-section pt-28">
-        <div className="main w-5/6 m-auto font-thin">
+        <div className="main w-5/6 m-auto font-extralight">
           {/* Header */}
           <h2 className="text-3xl mb-4 text-[#001242]">
             <span>H2 Latest </span>

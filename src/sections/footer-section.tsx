@@ -1,8 +1,6 @@
 import React from "react";
-import Logo from "../assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { motion, useAnimation } from "framer-motion";
-import Group from "../assets/Group.png";
 import { useInView } from "react-intersection-observer";
 
 const Footer: React.FC = () => {
@@ -29,13 +27,13 @@ const Footer: React.FC = () => {
   return (
     <>
       <motion.div
-        className="font-thin text-white"
+        className="font-extralight text-white"
         ref={ref}
         variants={containerVariants}
         initial="hidden"
         animate={controls}
       >
-        <div className="space-y-3 px-36 py-20 font-thin second-gradient text-white relative overflow-hidden h-[217px] w-full group">
+        <div className="space-y-3 px-36 py-20 font-extralight second-gradient text-white relative overflow-hidden h-[217px] w-full group">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-3xl">Full Width CTA</h1>
@@ -89,7 +87,7 @@ const Footer: React.FC = () => {
               {/* Column 1 */}
               <div>
                 <h4 className="font-bold mb-3">Services</h4>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li>Accounting</li>
                   <li>Tax</li>
                   <li>Advisory</li>
@@ -102,7 +100,7 @@ const Footer: React.FC = () => {
               {/* Column 2 */}
               <div>
                 <h4 className="font-bold mb-3">Industries</h4>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li>Private Client Services</li>
                   <li>Consumer & Industrial Products</li>
                   <li>Real Estate</li>
@@ -114,7 +112,7 @@ const Footer: React.FC = () => {
               {/* Column 3 */}
               <div>
                 <h4 className="font-bold mb-3">Insights</h4>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li>By Industry</li>
                   <li>By Service</li>
                   <li>Trending Topics</li>
@@ -124,7 +122,7 @@ const Footer: React.FC = () => {
               {/* Column 4 */}
               <div>
                 <h4 className="font-bold mb-3">About</h4>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li>About Us</li>
                   <li>Leadership</li>
                   <li>Corporate Social Responsibility</li>
@@ -136,7 +134,7 @@ const Footer: React.FC = () => {
               {/* Column 5 */}
               <div>
                 <h4 className="font-bold mb-3">Careers</h4>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li>Careers</li>
                   <li>Experienced Professionals</li>
                   <li>Students</li>
@@ -147,8 +145,16 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
+            <p className="text-center text-xs w-3/4 m-auto pt-10 leading-5">
+              CBIZ is a consulting, tax and financial services provider that
+              works closely with CBIZ CPAs P.C., an independent CPA firm that
+              provides audit, review and other attest services. In certain
+              jurisdictions, CBIZ CPA P.C. operates under its previous name,
+              Mayer Hoffman McCann. P.C.
+            </p>
+
             {/* Divider */}
-            <div className="border-t border-white opacity-20 my-6"></div>
+            <div className="border-2 border-t border-white opacity-20 my-6"></div>
 
             {/* Bottom Section */}
             <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
@@ -159,19 +165,24 @@ const Footer: React.FC = () => {
               </div>
 
               {/* Social Media Links */}
-              <div className="flex space-x-6 text-lg">
-                <a href="#" className="hover:opacity-80">
-                  🔗
-                </a>
-                <a href="#" className="hover:opacity-80">
-                  🔗
-                </a>
-                <a href="#" className="hover:opacity-80">
-                  🔗
-                </a>
-                <a href="#" className="hover:opacity-80">
-                  🔗
-                </a>
+              <div className="flex flex-col items-center space-y-2">
+                <div className="flex space-x-6">
+                  <a href="#" className="hover:opacity-80">
+                    <img src="/assets/linkedin.png" alt="linkedin" />
+                  </a>
+                  <a href="#" className="hover:opacity-80">
+                    <img src="/assets/facebook.png" alt="facebook" />
+                  </a>
+                  <a href="#" className="hover:opacity-80">
+                    <img src="/assets/insta.png" alt="insta" />
+                  </a>
+                  <a href="#" className="hover:opacity-80">
+                    <img src="/assets/twitter.png" alt="twitter" />
+                  </a>
+                </div>
+                <p className="text-xs">
+                  Privacy Policy | Terms & Conditions | Legal Disclaimer | Help
+                </p>
               </div>
 
               {/* Contact Button */}

@@ -20,15 +20,15 @@ const SecondSection: React.FC = () => {
       <motion.div ref={ref} className="relative w-full">
         <div className="main vector-image-container">
           <div className="pl-[8.5%] flex py-24 space-x-8">
-            <div className="font-thin">
-              <h1 className="text-4xl font-light mb-4 text-[#001242]">
+            <div className="font-extralight">
+              <h1 className="text-4xl mb-4 text-[#001242]">
                 Vedio Lorem <strong className="italic">Ipsum</strong>
               </h1>
               <p className="mb-6 text-[#575C5F]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
                 impedit aliquid tenetur enim officia cum molestiae.
               </p>
-              <Button className="bg-[#04773B] hover:bg-[#04773B] text-white font-light px-6 py-2">
+              <Button className="bg-[#04773B] hover:bg-[#04773B] text-white px-6 py-2">
                 Call to Action
               </Button>
             </div>

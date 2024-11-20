@@ -24,7 +24,7 @@ const SectionOne: React.FC = () => {
         <div className="grid grid-cols-4 pl-[8.5rem]">
           <div></div>
           <div className="flex items-center absolute z-50 w-2/6 top-[30%]">
-            <div className="text-[#001242] font-thin space-y-4">
+            <div className="text-[#001242] font-extralight space-y-4">
               <h1 className="text-4xl">
                 H1 Lorem Ipsum{" "}
                 <strong className="italic">
@@ -125,7 +125,7 @@ const SectionOne: React.FC = () => {
           </div>
         </div>
         <div className="absolute px-[8.5rem] w-full py-2">
-          <div className="flex justify-between items-center font-light w-full">
+          <div className="flex justify-between items-center font-extralight w-full">
             <div>
               <div className="w-full h-1 rounded-full overflow-hidden">
                 {backgroundIndex === 0 && (

@@ -36,7 +36,7 @@ const SixthSection: React.FC = () => {
         initial="hidden"
         animate={controls}
       >
-        <div className="main font-thin my-12">
+        <div className="main font-extralight my-12">
           <div className="grid grid-cols-2">
             {/* First Box */}
             <div className="space-y-3 px-40 py-10 first-gradient relative overflow-hidden group">

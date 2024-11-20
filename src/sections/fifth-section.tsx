@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
@@ -51,7 +51,7 @@ const FifthSection: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="text-center mt-24 font-thin">
+      <div className="text-center mt-24 font-extralight">
         <h2 className="text-3xl text-[#001242]">
           H2 Featured <strong className="italic">Services</strong>
         </h2>
@@ -73,7 +73,7 @@ const FifthSection: React.FC = () => {
       {/* Cards Section */}
       <div className="flex justify-center mt-10">
         {cards.map((card, index) => (
-          <Fade delay={index * 500} key={index}>
+          <Fade delay={index * 400} key={index}>
             <Card {...card} />
           </Fade>
         ))}
@@ -84,12 +84,21 @@ const FifthSection: React.FC = () => {
 
 export default FifthSection;
 
-const Card = ({ title, description, image }: CardProps) => {
+const Card = ({ title, image }: CardProps) => {
   const gradientRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
 
   const handleHoverStart = () => {
     if (gradientRef.current) {
       gradientRef.current.style.transform = "translateY(0%)";
+    }
+    if (titleRef.current) {
+      titleRef.current.style.transform = "translateY(-20px)";
+    }
+    if (descriptionRef.current) {
+      descriptionRef.current.style.maxHeight = "450px";
+      descriptionRef.current.style.transition = "max-height 0.5s ease-in-out";
     }
   };
 
@@ -97,11 +106,20 @@ const Card = ({ title, description, image }: CardProps) => {
     if (gradientRef.current) {
       gradientRef.current.style.transform = "translateY(100%)";
     }
+    if (titleRef.current) {
+      titleRef.current.style.transform = "translateY(0)";
+    }
+    if (descriptionRef.current) {
+      descriptionRef.current.style.maxHeight = "60px";
+      descriptionRef.current.style.transition = "max-height 0.5s ease-in-out";
+    }
   };
+
   return (
     <motion.div
-      ref={gradientRef}
-      className="relative group w-auto h-[450px] flex flex-col items-center justify-end p-6 font-thin overflow-hidden cursor-pointer"
+      className="relative group w-auto h-[450px] flex flex-col items-center justify-end p-6 font-extralight overflow-hidden cursor-pointer"
+      onMouseEnter={handleHoverStart}
+      onMouseLeave={handleHoverEnd}
     >
       {/* Background Image */}
       <img
@@ -112,25 +130,43 @@ const Card = ({ title, description, image }: CardProps) => {
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-custom-gradient z-10" />
+      <motion.div className="absolute top-0 left-0 w-full h-full bg-custom-gradient z-10" />
 
       {/* Hover Gradient Overlay */}
       <motion.div
-        onHoverStart={handleHoverStart}
-        onHoverEnd={handleHoverEnd}
+        ref={gradientRef}
         style={{
-          transition: "bottom 0.5s ease-in-out",
+          transition: "transform 0.4s ease-in-out",
         }}
-        className="absolute top-0 left-0 inset-0 card-gradient text-white p-4 font-bold text-2xl border-2 border-red-500"
-      >
-        hi
-      </motion.div>
+        className="absolute top-0 left-0 inset-0 card-gradient text-white p-4"
+      ></motion.div>
 
       {/* Card Content */}
       <div className="relative z-20 text-white">
-        <h3 className="text-lg font-medium">{title}</h3>
-        <p className="text-sm mt-2 mb-4">{description}</p>
-        <Button className="px-4 py-2 bg-[#04773B] hover:bg-[#04773B] font-medium">
+        <h3
+          ref={titleRef}
+          className="text-lg font-medium transition-transform duration-500"
+        >
+          {title}
+        </h3>
+        <p
+          ref={descriptionRef}
+          className="text-sm mt-2 mb-4 overflow-hidden line-clamp-14"
+          style={{
+            maxHeight: "60px",
+            transition: "max-height 0.5s ease-in-out",
+          }}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          veniam dignissimos, praesentium blanditiis quas quidem ipsam labore
+          ipsa consequatur assumenda quasi. Accusamus tempora tenetur, officia
+          minima explicabo ratione obcaecati animi aspernatur laudantium saepe.
+          Quos harum ullam veritatis eum provident beatae voluptate ex
+          praesentium quasi vero quidem illum, repellendus numquam mollitia sit
+          quisquam assumenda libero non officiis dicta ut incidunt? Doloremque
+          labore porro molestias est rem!
+        </p>
+        <Button className="px-4 py-2 bg-[#04773B] hover:bg-[#035a2b] font-medium">
           Call to Action
         </Button>
       </div>

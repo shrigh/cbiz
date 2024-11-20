@@ -8,12 +8,11 @@ import {
 } from "@/components/ui/select";
 
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { FaCaretRight } from "react-icons/fa6";
 
 const SeventhSection: React.FC = () => {
   return (
     <>
-      <div className="min-h-screen font-thin flex flex-col items-center gap-8 py-16 w-5/6 m-auto">
+      <div className="min-h-screen font-extralight flex flex-col items-center gap-8 py-16 w-5/6 m-auto">
         <h2 className="text-3xl text-gray-800">
           H2 Lorem Ipsum <strong className="italic">Dolor</strong>
         </h2>
@@ -88,7 +87,7 @@ const Card = ({ image, title }: CardProps) => {
       {/* Gradient Animation */}
       <div
         ref={gradientRef}
-        className="absolute overflow-hidden inset-0 card-gradient text-white p-10 space-y-4"
+        className="absolute overflow-hidden inset-0 client-card-gradient text-white p-10 space-y-4"
       >
         <h1 className="text-2xl mt-12">Lorem Ipsum Dolor Case Study Title</h1>
         <p className="text-sm">
@@ -98,12 +97,10 @@ const Card = ({ image, title }: CardProps) => {
         </p>
         <div className="flex items-center gap-x-2 text-sm font-medium absolute bottom-6">
           <span>View Full Case Study</span>
-          <span className="pt-0.5">
-            <FaCaretRight />
-          </span>
+          <img src="/assets/white-polygon.png" alt="loading.." />
         </div>
-        <div className="absolute">
-          <img src="/assets/Group.png" alt="lines.." />
+        <div className="absolute right-0 -bottom-28">
+          <img src="/assets/Group.png" alt="lines.." className="w-[600px] h-[400px] object-cover"/>
         </div>
       </div>
 
