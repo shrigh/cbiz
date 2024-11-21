@@ -23,7 +23,7 @@ const SectionOne: React.FC = () => {
       <div className="min-h-[calc(100vh-8rem)] relative">
         <div className="grid grid-cols-4 pl-[8.5rem]">
           <div></div>
-          <div className="flex items-center absolute z-50 w-2/6 top-[30%]">
+          <div className="flex items-center absolute z-40 w-2/6 top-[30%]">
             <div className="text-[#001242] font-extralight space-y-4">
               <h1 className="text-4xl">
                 H1 Lorem Ipsum{" "}
@@ -52,11 +52,7 @@ const SectionOne: React.FC = () => {
 
                 <div className="flex items-center gap-x-2 text-sm cursor-pointer hover:bg-slate-100 px-4 rounded-full">
                   <span className="font-medium">Call to Action</span>
-                  <img
-                    src="/assets/polygon2.png"
-                    alt="action.."
-                    className="pt-1"
-                  />
+                  <img src="/assets/polygon2.png" alt="action.." />
                 </div>
               </div>
             </div>

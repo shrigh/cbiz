@@ -1,39 +1,18 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { BsLinkedin } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+import { BsTwitterX } from "react-icons/bs";
+import { WhiteLines } from "../constants/constant";
+import { Fade } from "react-awesome-reveal";
 
 const Footer: React.FC = () => {
-  // Hook to track the section's visibility
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
-
-  // Trigger animation when in view
-  React.useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [inView, controls]);
-
-  // Motion Variants for the reveal animation
-  const containerVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
   return (
-    <>
-      <motion.div
-        className="font-extralight text-white"
-        ref={ref}
-        variants={containerVariants}
-        initial="hidden"
-        animate={controls}
-      >
-        <div className="space-y-3 px-36 py-20 font-extralight second-gradient text-white relative overflow-hidden h-[217px] w-full group">
+    <Fade delay={300} triggerOnce>
+      <div className="font-extralight text-white">
+        <div className="space-y-3 px-32 py-20 second-gradient text-white relative overflow-hidden h-[217px] group">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-3xl">Full Width CTA</h1>
@@ -42,49 +21,44 @@ const Footer: React.FC = () => {
                 Accusamus sed minus officiis,
               </p>
             </div>
-            <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-50">
+            <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-40 font-extralight">
               Contact Us
             </Button>
           </div>
 
           {/* Image Wrapping for Hover Effect */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            {/* Motion Image with Initial Hidden and Scale on Hover */}
-            <motion.img
-              src="/assets/Group.png"
-              alt="lines.."
-              animate={{
-                opacity: 1,
-                scale: 1.5,
-                y: 80,
-              }}
-              whileHover={{
-                opacity: 1,
-                scale: 1.5,
-                y: [80, 0],
-                transition: {
-                  opacity: { delay: 0.2, duration: 0.1 },
-                  scale: { duration: 0.5 },
-                  type: "spring",
-                  stiffness: 200,
-                  damping: 20,
-                  duration: 0.5,
-                  y: {
-                    repeat: Infinity,
-                    duration: 10,
-                    ease: "linear",
-                  },
-                },
-              }}
-              className="absolute right-36 bottom-0 w-[36rem]"
-            />
+          <div className="absolute top-0 w-1/2 right-0 h-full overflow-visible">
+            {WhiteLines.map((line, index) => (
+              <Fade key={line.id} delay={index * 300} triggerOnce>
+                <motion.img
+                  src={line.img}
+                  alt="lines.."
+                  animate={{
+                    opacity: 1,
+                    y: [0, -20],
+                    transition: {
+                      opacity: { delay: 0.2, duration: 0.3 },
+                      scale: { duration: 0.3 },
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 15,
+                      duration: 0.3,
+                      y: {
+                        duration: 3,
+                        ease: "linear",
+                      },
+                    },
+                    repeatCount: 1,
+                  }}
+                  className={`absolute ${line.offset} -bottom-5 w-full z-10`}
+                />
+              </Fade>
+            ))}
           </div>
         </div>
-        <div className="footer-gradient py-12">
+        <div className="footer-gradient pt-12">
           <div className="w-5/6 mx-auto px-4">
-            {/* Footer Links */}
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 text-sm">
-              {/* Column 1 */}
               <div>
                 <h4 className="font-bold mb-3">Services</h4>
                 <ul className="space-y-3">
@@ -97,7 +71,6 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Column 2 */}
               <div>
                 <h4 className="font-bold mb-3">Industries</h4>
                 <ul className="space-y-3">
@@ -109,7 +82,6 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Column 3 */}
               <div>
                 <h4 className="font-bold mb-3">Insights</h4>
                 <ul className="space-y-3">
@@ -119,7 +91,6 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Column 4 */}
               <div>
                 <h4 className="font-bold mb-3">About</h4>
                 <ul className="space-y-3">
@@ -131,7 +102,6 @@ const Footer: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Column 5 */}
               <div>
                 <h4 className="font-bold mb-3">Careers</h4>
                 <ul className="space-y-3">
@@ -145,7 +115,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-center text-xs w-3/4 m-auto pt-10 leading-5">
+            <p className="text-center text-xs w-3/4 m-auto pt-6 leading-5">
               CBIZ is a consulting, tax and financial services provider that
               works closely with CBIZ CPAs P.C., an independent CPA firm that
               provides audit, review and other attest services. In certain
@@ -153,31 +123,27 @@ const Footer: React.FC = () => {
               Mayer Hoffman McCann. P.C.
             </p>
 
-            {/* Divider */}
-            <div className="border-2 border-t border-white opacity-20 my-6"></div>
+            <div className="border-2 border-t border-white opacity-20 my-3"></div>
 
-            {/* Bottom Section */}
             <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-              {/* Logo and Copyright */}
               <div className="text-center space-y-2">
                 <img src="/assets/logo.png" alt="logo.." />
                 <p className="text-xs mt-2">©2024 CBIZ. All Rights Reserved.</p>
               </div>
 
-              {/* Social Media Links */}
               <div className="flex flex-col items-center space-y-2">
-                <div className="flex space-x-6">
+                <div className="flex space-x-6 text-white">
                   <a href="#" className="hover:opacity-80">
-                    <img src="/assets/linkedin.png" alt="linkedin" />
+                    <BsLinkedin />
                   </a>
                   <a href="#" className="hover:opacity-80">
-                    <img src="/assets/facebook.png" alt="facebook" />
+                    <FaFacebookF />
                   </a>
                   <a href="#" className="hover:opacity-80">
-                    <img src="/assets/insta.png" alt="insta" />
+                    <GrInstagram />
                   </a>
                   <a href="#" className="hover:opacity-80">
-                    <img src="/assets/twitter.png" alt="twitter" />
+                    <BsTwitterX />
                   </a>
                 </div>
                 <p className="text-xs">
@@ -185,17 +151,16 @@ const Footer: React.FC = () => {
                 </p>
               </div>
 
-              {/* Contact Button */}
               <div>
-                <Button className="bg-[#04773B] hover:bg-[#04773B] text-white h-9">
+                <Button className="bg-[#04773B] hover:bg-[#04773B] text-white h-9 font-extralight">
                   Contact Us
                 </Button>
               </div>
             </div>
           </div>
         </div>
-      </motion.div>
-    </>
+      </div>
+    </Fade>
   );
 };
 

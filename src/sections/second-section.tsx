@@ -50,11 +50,11 @@ const SecondSection: React.FC = () => {
               }}
             >
               {/* Image */}
-              <div className="w-full relative">
+              <div className="relative">
                 <img
                   src="/assets/h3.jpg"
                   alt="image.."
-                  className="rounded-l-lg w-full h-full object-cover"
+                  className="rounded-l-lg object-cover"
                 />
                 {/* Play Button */}
                 <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">

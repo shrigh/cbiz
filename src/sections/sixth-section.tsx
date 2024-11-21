@@ -1,7 +1,17 @@
 import { Button } from "@/components/ui/button";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Fade } from "react-awesome-reveal";
+import { Lines, WhiteLines } from "../constants/constant";
+
+interface CardProps {
+  heading: string;
+  strongHeading: string;
+  description: string;
+  buttonContent: string;
+  Data: any[];
+}
 
 const SixthSection: React.FC = () => {
   // Hook to track the section's visibility
@@ -9,7 +19,7 @@ const SixthSection: React.FC = () => {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   // Trigger animation when in view
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
@@ -37,96 +47,25 @@ const SixthSection: React.FC = () => {
         <div className="main font-extralight my-12">
           <div className="grid grid-cols-2">
             {/* First Box */}
-            <div className="space-y-3 px-40 py-10 first-gradient relative overflow-hidden group">
-              <h1 className="text-3xl text-[#001242]">
-                CBIZ <strong className="italic">Careers</strong>
-              </h1>
-              <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusamus sed minus officiis,
-              </p>
-              <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-20 relative">
-                See Open Jobs
-              </Button>
-
-              {/* Image Wrapping for Hover Effect */}
-              <div className="absolute top-0 left-0 w-full h-full">
-                {/* Motion Image with Initial Hidden and Scale on Hover */}
-                <motion.img
-                  src="/assets/lines.png"
-                  alt="lines.."
-                  animate={{
-                    opacity: 1,
-                    scale: 1.5,
-                    y: 80,
-                  }}
-                  whileHover={{
-                    opacity: 1,
-                    scale: 1.5,
-                    y: [80, 0],
-                    transition: {
-                      opacity: { delay: 0.2, duration: 0.1 },
-                      scale: { duration: 0.5 },
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 20,
-                      duration: 0.5,
-                      y: {
-                        repeat: Infinity,
-                        duration: 10,
-                        ease: "linear",
-                      },
-                    },
-                  }}
-                  className="absolute right-0 bottom-0 w-full z-10"
-                />
-              </div>
+            <div className="space-y-3 px-40 py-10 first-gradient relative overflow-hidden cursor-pointer">
+              <CardWithLines
+                heading="CBIZ"
+                strongHeading="Careers"
+                description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus sed minus officiis."
+                buttonContent="See Open Jobs"
+                Data={Lines}
+              />
             </div>
 
             {/* Second Box */}
-            <div className="space-y-3 px-40 py-10 second-gradient text-white relative overflow-hidden group">
-              <h1 className="text-3xl">
-                CBIZ <strong className="italic">Culture</strong>
-              </h1>
-              <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusamus sed minus officiis,
-              </p>
-              <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-20 relative">
-                View More
-              </Button>
-              {/* Image Wrapping for Hover Effect */}
-              <div className="absolute top-0 left-0 w-full h-full">
-                {/* Motion Image with Initial Hidden and Scale on Hover */}
-                <motion.img
-                  src="/assets/Group.png"
-                  alt="lines.."
-                  animate={{
-                    opacity: 1,
-                    scale: 1.5,
-                    y: 80,
-                  }}
-                  whileHover={{
-                    opacity: 1,
-                    scale: 1.5,
-                    y: [80, 0],
-                    transition: {
-                      opacity: { delay: 0.2, duration: 0.1 },
-                      scale: { duration: 0.5 },
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 20,
-                      duration: 0.5,
-                      y: {
-                        repeat: Infinity,
-                        duration: 10,
-                        ease: "linear",
-                      },
-                    },
-                  }}
-                  className="absolute right-0 bottom-0 w-full z-10"
-                />
-              </div>
+            <div className="space-y-3 px-40 py-10 second-gradient text-white relative overflow-hidden cursor-pointer">
+              <CardWithLines
+                heading="CBIZ"
+                strongHeading="Culture"
+                description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus sed minus officiis."
+                buttonContent="View More"
+                Data={WhiteLines}
+              />
             </div>
           </div>
         </div>
@@ -136,3 +75,52 @@ const SixthSection: React.FC = () => {
 };
 
 export default SixthSection;
+
+const CardWithLines: React.FC<CardProps> = ({
+  heading,
+  strongHeading,
+  description,
+  buttonContent,
+  Data,
+}) => {
+  return (
+    <>
+      <h1 className="text-3xl">
+        {heading} <strong className="italic">{strongHeading}</strong>
+      </h1>
+      <p className="text-sm">{description}</p>
+      <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-20 relative font-extralight">
+        {buttonContent}
+      </Button>
+      {/* Image Wrapping for Hover Effect */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        {Data.map((line, index) => (
+          <Fade key={line.id} delay={index * 300} triggerOnce>
+            <motion.img
+              src={line.img}
+              alt="lines.."
+              animate={{
+                opacity: 1,
+                y: [0, -20],
+                transition: {
+                  opacity: { delay: 0.2, duration: 0.3 },
+                  scale: { duration: 0.3 },
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 15,
+                  duration: 0.3,
+                  y: {
+                    duration: 3,
+                    ease: "linear",
+                  },
+                },
+                repeatCount: 1,
+              }}
+              className={`absolute ${line.offset} -bottom-5 w-full z-10 overflow-visible`}
+            />
+          </Fade>
+        ))}
+      </div>
+    </>
+  );
+};

@@ -123,13 +123,13 @@ const Card = ({ image, title }: CardProps) => {
           ></div>
           {isGradientUp ? (
             <ChevronDown
-              className={`text-white absolute left-[47%] self-center -bottom-1 z-50 ${
+              className={`text-white absolute left-[47%] self-center -bottom-1 z-40 ${
                 isGradientUp ? "-top-[96%]" : "-bottom-5"
               }`}
             />
           ) : (
             <ChevronUp
-              className={`text-white absolute left-[47%] self-center -bottom-1 z-50 `}
+              className={`text-white absolute left-[47%] self-center -bottom-1 z-40 `}
             />
           )}
         </motion.div>

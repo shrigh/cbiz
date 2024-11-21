@@ -63,11 +63,7 @@ const ThirdSection: React.FC = () => {
                   <span className="text-sm font-medium text-[#001242]">
                     Call to Action
                   </span>
-                  <img
-                    src="/assets/polygon2.png"
-                    alt="loading.."
-                    className="pt-1"
-                  />
+                  <img src="/assets/polygon2.png" alt="loading.." />
                 </div>
               </div>
             </div>
@@ -122,11 +118,7 @@ const ThirdSection: React.FC = () => {
                   <span className="text-sm font-medium text-[#001242]">
                     Call to Action
                   </span>
-                  <img
-                    src="/assets/polygon2.png"
-                    alt="loading.."
-                    className="pt-1"
-                  />
+                  <img src="/assets/polygon2.png" alt="loading.." />
                 </div>
               </div>
             </div>

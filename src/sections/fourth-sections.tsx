@@ -72,7 +72,7 @@ const FourthSection: React.FC = () => {
           {/* Main Content */}
           <div className="flex space-x-10">
             {/* Left Section */}
-            <div className="w-2/3">
+            <div className="w-3/3">
               <div className="overflow-hidden">
                 <img
                   src="/assets/img6.jpg"
@@ -98,11 +98,11 @@ const FourthSection: React.FC = () => {
             </div>
 
             {/* Right Section */}
-            <div className="w-1/3">
+            <div className="w-2/3">
               {articles.map((article) => (
                 <div
                   key={article.id}
-                  className="flex items-start space-x-4 border-2 border-transparent hover:border-slate-400 cursor-pointer p-3 hover:rounded-xl"
+                  className="flex items-start space-x-4 border-2 border-transparent hover:border-slate-400 cursor-pointer p-3 hover:rounded-2xl"
                 >
                   <img
                     src={article.image}
@@ -117,7 +117,7 @@ const FourthSection: React.FC = () => {
                     <h4 className=" font-medium text-[1rem] text-[#001242]">
                       {article.title}
                     </h4>
-                    <p className=" text-[#575C5F] line-clamp-2">
+                    <p className=" text-[#575C5F] line-clamp-3">
                       {article.description}
                     </p>
                   </div>

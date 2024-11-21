@@ -45,35 +45,40 @@ const FifthSection: React.FC = () => {
       title: "Technology",
       description:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: "/assets/technology.jpg",
+      image: "/assets/h3.jpg",
     },
   ];
 
   return (
     <div className="min-h-screen">
-      <div className="text-center mt-24 font-extralight">
-        <h2 className="text-3xl text-[#001242]">
-          H2 Featured <strong className="italic">Services</strong>
-        </h2>
-        <p className="text-[#575C5F] mt-2">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod <br />
-          tempor invidunt ut labore.
-        </p>
-        <div className="space-x-4 py-5">
-          <Button className="h-9 bg-[#001242] hover:bg-[#001242]">
-            Services
-          </Button>
-          <Button variant="outline" className="h-9 text-[#575C5F]">
-            Industries
-          </Button>
+      <Fade triggerOnce={true}>
+        <div className="text-center mt-24 font-extralight">
+          <h2 className="text-3xl text-[#001242]">
+            H2 Featured <strong className="italic">Services</strong>
+          </h2>
+          <p className="text-[#575C5F] mt-2">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod <br />
+            tempor invidunt ut labore.
+          </p>
+          <div className="space-x-4 py-5">
+            <Button className="h-9 bg-[#001242] hover:bg-[#001242] font-extralight">
+              Services
+            </Button>
+            <Button
+              variant="outline"
+              className="h-9 text-[#575C5F] font-extralight"
+            >
+              Industries
+            </Button>
+          </div>
         </div>
-      </div>
+      </Fade>
 
       {/* Cards Section */}
       <div className="flex justify-center mt-10">
         {cards.map((card, index) => (
-          <Fade delay={index * 400} key={index}>
+          <Fade delay={index * 400} key={index} triggerOnce={true}>
             <Card {...card} />
           </Fade>
         ))}
@@ -166,7 +171,7 @@ const Card = ({ title, image }: CardProps) => {
           quisquam assumenda libero non officiis dicta ut incidunt? Doloremque
           labore porro molestias est rem!
         </p>
-        <Button className="px-4 py-2 bg-[#04773B] hover:bg-[#035a2b] font-medium">
+        <Button className="px-4 py-2 bg-[#04773B] hover:bg-[#035a2b] font-extralight">
           Call to Action
         </Button>
       </div>
