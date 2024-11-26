@@ -67,14 +67,22 @@ const Card = ({ image, title }: CardProps) => {
   const handleHoverStart = () => {
     if (gradientRef.current) {
       gradientRef.current.style.transform = "translateY(0%)";
-      setIsGradientUp(true);
+      const timer = setTimeout(() => {
+        setIsGradientUp(!isGradientUp);
+      }, 500);
+
+      return () => clearInterval(timer);
     }
   };
 
   const handleHoverEnd = () => {
     if (gradientRef.current) {
       gradientRef.current.style.transform = "translateY(100%)";
-      setIsGradientUp(false);
+      const timer = setTimeout(() => {
+        setIsGradientUp(!isGradientUp);
+      }, 500);
+
+      return () => clearInterval(timer);
     }
   };
 
@@ -100,7 +108,11 @@ const Card = ({ image, title }: CardProps) => {
           <img src="/assets/white-polygon.png" alt="loading.." />
         </div>
         <div className="absolute right-0 -bottom-28">
-          <img src="/assets/Group.png" alt="lines.." className="w-[600px] h-[400px] object-cover"/>
+          <img
+            src="/assets/Group.png"
+            alt="lines.."
+            className="w-[600px] h-[400px] object-cover"
+          />
         </div>
       </div>
 

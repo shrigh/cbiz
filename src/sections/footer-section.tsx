@@ -5,14 +5,22 @@ import { BsLinkedin } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { BsTwitterX } from "react-icons/bs";
-import { WhiteLines } from "../constants/constant";
 import { Fade } from "react-awesome-reveal";
 
 const Footer: React.FC = () => {
+  const WhiteLines = [
+    { id: 3, img: "/assets/white-lines/l-3.png", offset: "right-20" },
+    { id: 4, img: "/assets/white-lines/l-4.png", offset: "right-7" },
+    { id: 5, img: "/assets/white-lines/l-5.png" },
+    { id: 6, img: "/assets/white-lines/l-6.png" },
+    { id: 7, img: "/assets/white-lines/l-7.png" },
+    { id: 8, img: "/assets/white-lines/l-8.png" },
+  ];
+
   return (
     <Fade delay={300} triggerOnce>
       <div className="font-extralight text-white">
-        <div className="space-y-3 px-32 py-20 second-gradient text-white relative overflow-hidden h-[217px] group">
+        <div className="space-y-3 px-32 py-20 second-gradient text-white relative overflow-hidden h-[217px]">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-3xl">Full Width CTA</h1>
@@ -21,36 +29,30 @@ const Footer: React.FC = () => {
                 Accusamus sed minus officiis,
               </p>
             </div>
-            <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-40 font-extralight">
-              Contact Us
+            <Button
+              className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
+  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full"
+            >
+              <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
+                Contact Us
+                <img
+                  src="/assets/ellipse.png"
+                  alt="ellipse.."
+                  className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
+                />
+              </span>
+              <div className="absolute inset-0 bg-[#04773B] transition-transform duration-500 transform translate-x-0 group-hover:translate-x-full"></div>
             </Button>
           </div>
 
           {/* Image Wrapping for Hover Effect */}
-          <div className="absolute top-0 w-1/2 right-0 h-full overflow-visible">
-            {WhiteLines.map((line, index) => (
-              <Fade key={line.id} delay={index * 300} triggerOnce>
+          <div className="absolute top-0 w-1/2 right-0 h-full">
+            {WhiteLines.map((line) => (
+              <Fade key={line.id} triggerOnce>
                 <motion.img
                   src={line.img}
                   alt="lines.."
-                  animate={{
-                    opacity: 1,
-                    y: [0, -20],
-                    transition: {
-                      opacity: { delay: 0.2, duration: 0.3 },
-                      scale: { duration: 0.3 },
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 15,
-                      duration: 0.3,
-                      y: {
-                        duration: 3,
-                        ease: "linear",
-                      },
-                    },
-                    repeatCount: 1,
-                  }}
-                  className={`absolute ${line.offset} -bottom-5 w-full z-10`}
+                  className={`absolute ${line.offset} bottom-0 right-0 w-full`}
                 />
               </Fade>
             ))}

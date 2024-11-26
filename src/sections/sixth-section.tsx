@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import { Lines, WhiteLines } from "../constants/constant";
 
@@ -14,63 +13,34 @@ interface CardProps {
 }
 
 const SixthSection: React.FC = () => {
-  // Hook to track the section's visibility
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
-
-  // Trigger animation when in view
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [inView, controls]);
-
-  // Motion Variants for the reveal animation
-  const containerVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
   return (
-    <>
-      <motion.div
-        className="fifth-section"
-        ref={ref}
-        variants={containerVariants}
-        initial="hidden"
-        animate={controls}
-      >
-        <div className="main font-extralight my-12">
-          <div className="grid grid-cols-2">
-            {/* First Box */}
-            <div className="space-y-3 px-40 py-10 first-gradient relative overflow-hidden cursor-pointer">
-              <CardWithLines
-                heading="CBIZ"
-                strongHeading="Careers"
-                description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus sed minus officiis."
-                buttonContent="See Open Jobs"
-                Data={Lines}
-              />
-            </div>
+    <div className="fifth-section">
+      <div className="main font-extralight my-12">
+        <div className="grid grid-cols-2">
+          {/* First Box */}
+          <div className="space-y-3 px-40 py-10 first-gradient relative overflow-hidden cursor-pointer">
+            <CardWithLines
+              heading="CBIZ"
+              strongHeading="Careers"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus sed minus officiis."
+              buttonContent="See Open Jobs"
+              Data={Lines}
+            />
+          </div>
 
-            {/* Second Box */}
-            <div className="space-y-3 px-40 py-10 second-gradient text-white relative overflow-hidden cursor-pointer">
-              <CardWithLines
-                heading="CBIZ"
-                strongHeading="Culture"
-                description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus sed minus officiis."
-                buttonContent="View More"
-                Data={WhiteLines}
-              />
-            </div>
+          {/* Second Box */}
+          <div className="space-y-3 px-40 py-10 second-gradient text-white relative overflow-hidden cursor-pointer">
+            <CardWithLines
+              heading="CBIZ"
+              strongHeading="Culture"
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus sed minus officiis."
+              buttonContent="View More"
+              Data={WhiteLines}
+            />
           </div>
         </div>
-      </motion.div>
-    </>
+      </div>
+    </div>
   );
 };
 
@@ -83,6 +53,11 @@ const CardWithLines: React.FC<CardProps> = ({
   buttonContent,
   Data,
 }) => {
+  const [hovering, setHovering] = useState(false);
+
+  const handleHoverStart = () => setHovering(true);
+  const handleHoverEnd = () => setHovering(false);
+
   return (
     <>
       <h1 className="text-3xl">
@@ -93,15 +68,20 @@ const CardWithLines: React.FC<CardProps> = ({
         {buttonContent}
       </Button>
       {/* Image Wrapping for Hover Effect */}
-      <div className="absolute top-0 left-0 w-full h-full">
+      <div
+        className="absolute top-0 left-0 w-full h-full"
+        onMouseEnter={handleHoverStart}
+        onMouseLeave={handleHoverEnd}
+      >
         {Data.map((line, index) => (
           <Fade key={line.id} delay={index * 300} triggerOnce>
             <motion.img
+              key={hovering ? `hovered-${line.id}` : `initial-${line.id}`}
               src={line.img}
-              alt="lines.."
+              alt="lines"
               animate={{
                 opacity: 1,
-                y: [0, -20],
+                y: hovering ? [0, -20] : [0, 0],
                 transition: {
                   opacity: { delay: 0.2, duration: 0.3 },
                   scale: { duration: 0.3 },
@@ -114,7 +94,6 @@ const CardWithLines: React.FC<CardProps> = ({
                     ease: "linear",
                   },
                 },
-                repeatCount: 1,
               }}
               className={`absolute ${line.offset} -bottom-5 w-full z-10 overflow-visible`}
             />

@@ -56,8 +56,19 @@ const ThirdSection: React.FC = () => {
                 </li>
               </ul>
               <div className="flex gap-4 pt-4">
-                <Button className="px-6 py-2 bg-[#04773B] hover:bg-[#04773B] text-white rounded-lg">
-                  Learn More
+                <Button
+                  className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
+  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full"
+                >
+                  <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
+                    learn More
+                    <img
+                      src="/assets/ellipse.png"
+                      alt="ellipse.."
+                      className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
+                    />
+                  </span>
+                  <div className="absolute inset-0 bg-[#04773B] transition-transform duration-500 transform translate-x-0 group-hover:translate-x-full"></div>
                 </Button>
                 <div className="bg-transparent flex items-center space-x-2 px-6">
                   <span className="text-sm font-medium text-[#001242]">
@@ -111,9 +122,21 @@ const ThirdSection: React.FC = () => {
                 </li>
               </ul>
               <div className="flex gap-4 pt-4">
-                <Button className="px-6 py-2 bg-[#04773B] hover:bg-[#04773B] text-white rounded-lg">
-                  Learn More
+                <Button
+                  className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
+  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full"
+                >
+                  <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
+                    learn More
+                    <img
+                      src="/assets/ellipse.png"
+                      alt="ellipse.."
+                      className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
+                    />
+                  </span>
+                  <div className="absolute inset-0 bg-[#04773B] transition-transform duration-500 transform translate-x-0 group-hover:translate-x-full"></div>
                 </Button>
+
                 <div className="bg-transparent flex items-center space-x-2 px-6">
                   <span className="text-sm font-medium text-[#001242]">
                     Call to Action

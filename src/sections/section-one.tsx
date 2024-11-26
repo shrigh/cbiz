@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { HomeLines } from "@/constants/constant";
+import { Fade } from "react-awesome-reveal";
 
 const SectionOne: React.FC = () => {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
@@ -38,13 +40,16 @@ const SectionOne: React.FC = () => {
                 Accusamus?
               </p>
               <div className="btn flex space-x-2 pt-4">
-                <Button className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center gap-x-2 border border-transparent overflow-hidden group hover:w-36 hover:rounded-full hover:border hover:border-black/10 h-10">
-                  <span className="relative z-10 flex items-center gap-x-2">
+                <Button
+                  className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
+  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full"
+                >
+                  <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
                     About CBIZ
                     <img
                       src="/assets/ellipse.png"
                       alt="ellipse.."
-                      className="w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
                     />
                   </span>
                   <div className="absolute inset-0 bg-[#04773B] transition-transform duration-500 transform translate-x-0 group-hover:translate-x-full"></div>
@@ -58,66 +63,78 @@ const SectionOne: React.FC = () => {
             </div>
           </div>
           <div
-            className={`col-span-3 custom-height transition-all relative overflow-hidden group  ${
+            className={`col-span-3 custom-height transition-all relative ${
               progress === 0 ? "duration-0" : "duration-1000"
             }`}
             style={{
-              backgroundImage: `
-               linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
-              linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
-              ${
-                backgroundIndex === 0
-                  ? `url("/assets/h1.jpg")`
-                  : `url("/assets/h2.jpg")`
-              }
-              `,
+              backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+                       linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+                       ${
+                         backgroundIndex === 0
+                           ? `url("/assets/h1.jpg")`
+                           : `url("/assets/h2.jpg")`
+                       }`,
               backgroundSize: `${100 + progress / 2}%`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="absolute right- bottom-0 w-full h-full">
-              {/* <motion.img
-                src="/assets/lines.png"
-                alt="lines.."
-                animate={{
-                  opacity: 1,
-                  scale: 1.5,
-                  y: [100, 0],
-                  transition: {
-                    opacity: { delay: 0.2, duration: 0.5 },
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 20,
-                    duration: 0,
-                    y: {
-                      repeat: Infinity,
-                      duration: 10,
-                      ease: "linear",
-                    },
-                  },
-                }}
-                className="absolute right-64"
-              /> */}
-
-              <motion.img
-                src="/assets/lines.png"
-                alt="lines.."
-                animate={{
-                  opacity: 1,
-                  scale: 1.5,
-                  x: [-100, 300], // Move from left to right
-                  y: [100, -100], // Move from bottom to top
-                  transition: {
-                    opacity: { delay: 0.2, duration: 0.5 },
-                    scale: { duration: 1 },
-                    x: { duration: 5, ease: "linear" }, // Smooth horizontal movement
-                    y: { duration: 5, ease: "linear" }, // Smooth vertical movement
-                  },
-                }}
-                className="absolute right-64"
-              />
+            {/* Main content */}
+            <div
+              className={`h-full transition-all ${
+                progress === 0 ? "duration-0" : "duration-1000"
+              }`}
+            >
+              <div className="overflow-hidden absolute bottom-0 w-full h-full">
+                <div className="w-full h-full">
+                  {HomeLines.map((line, index) => (
+                    <Fade key={line.id} delay={index * 300}>
+                      <motion.img
+                        key={`${line.id}-${backgroundIndex}`}
+                        src={line.img}
+                        alt="lines"
+                        className={`absolute ${line.right} ${line.bottom}`}
+                        initial={{ opacity: 0, y: 100, scale: 1 }}
+                        animate={{
+                          opacity: 1,
+                          y: [0, -20],
+                          transition: {
+                            opacity: { delay: 0.2, duration: 0.3 },
+                            scale: { duration: 0.3 },
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 15,
+                            duration: 0.3,
+                            y: {
+                              duration: 3,
+                              ease: "linear",
+                            },
+                          },
+                        }}
+                      />
+                    </Fade>
+                  ))}
+                </div>
+              </div>
             </div>
+
+            {/* Second div with background image */}
+            <div
+              className="top-0 right-0 absolute w-full h-full"
+              style={{
+                backgroundImage: `
+      linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+      linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+      ${
+        backgroundIndex === 0
+          ? `url("/assets/home-2.png")`
+          : `url("/assets/home-1.png")`
+      }`,
+                backgroundSize: `${100 + progress / 4}%`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
           </div>
         </div>
         <div className="absolute px-[8.5rem] w-full py-2">

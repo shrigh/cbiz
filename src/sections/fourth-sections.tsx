@@ -102,7 +102,7 @@ const FourthSection: React.FC = () => {
               {articles.map((article) => (
                 <div
                   key={article.id}
-                  className="flex items-start space-x-4 border-2 border-transparent hover:border-slate-400 cursor-pointer p-3 hover:rounded-2xl"
+                  className="flex items-start space-x-4 border-2 border-transparent hover:border-[#575C5F] cursor-pointer p-3 hover:rounded-2xl"
                 >
                   <img
                     src={article.image}
