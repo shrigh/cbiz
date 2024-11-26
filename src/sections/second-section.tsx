@@ -30,7 +30,7 @@ const SecondSection: React.FC = () => {
               </p>
               <Button
                 className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
-  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full"
+  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full font-extralight"
               >
                 <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
                   Call to Action

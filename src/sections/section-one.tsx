@@ -12,7 +12,7 @@ const SectionOne: React.FC = () => {
     // Simulate loader progress
     const progressInterval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 1 : 0));
-    }, 30);
+    }, 50);
 
     if (progress === 100) {
       setProgress(0);
@@ -44,7 +44,7 @@ const SectionOne: React.FC = () => {
                   className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
   gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full"
                 >
-                  <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
+                  <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full font-extralight">
                     About CBIZ
                     <img
                       src="/assets/ellipse.png"
@@ -132,7 +132,7 @@ const SectionOne: React.FC = () => {
           ? `url("/assets/home-2.png")`
           : `url("/assets/home-1.png")`
       }`,
-                backgroundSize: `${100 + progress / 8}%`,
+                backgroundSize: `${100 + progress / 4}%`,
                 backgroundPosition: `${
                   backgroundIndex === 0 ? "center" : "center 16%"
                 }`,
