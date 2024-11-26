@@ -90,7 +90,7 @@ const SectionOne: React.FC = () => {
               <div className="overflow-hidden absolute bottom-0 w-full h-full">
                 <div className="w-full h-full">
                   {HomeLines.map((line, index) => (
-                    <Fade key={line.id} delay={index * 300}>
+                    <Fade key={line.id} delay={index * 300} triggerOnce>
                       <motion.img
                         key={`${line.id}-${backgroundIndex}`}
                         src={line.img}
@@ -132,7 +132,7 @@ const SectionOne: React.FC = () => {
           ? `url("/assets/home-2.png")`
           : `url("/assets/home-1.png")`
       }`,
-                backgroundSize: `${100 + progress / 8}%`,
+                backgroundSize: `${100 + progress / 10}%`,
                 backgroundPosition: `${
                   backgroundIndex === 0 ? "center" : "center 16%"
                 }`,
