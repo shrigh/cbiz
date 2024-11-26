@@ -12,7 +12,7 @@ const SectionOne: React.FC = () => {
     // Simulate loader progress
     const progressInterval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 1 : 0));
-    }, 17);
+    }, 20);
 
     if (progress === 100) {
       setProgress(0);
@@ -125,8 +125,8 @@ const SectionOne: React.FC = () => {
               style={{
                 backgroundImage: `
       linear-gradient(to top left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 10%),
-    linear-gradient(to bottom left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 10%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 10%),
+    linear-gradient(to top right, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0) 30%),
+   
       ${
         backgroundIndex === 0
           ? `url("/assets/home-2.png")`
