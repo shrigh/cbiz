@@ -12,7 +12,7 @@ const SectionOne: React.FC = () => {
     // Simulate loader progress
     const progressInterval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 1 : 0));
-    }, 50);
+    }, 17);
 
     if (progress === 100) {
       setProgress(0);
@@ -75,7 +75,9 @@ const SectionOne: React.FC = () => {
                            : `url("/assets/h2.jpg")`
                        }`,
               backgroundSize: `${100 + progress / 2}%`,
-              backgroundPosition: "center",
+              backgroundPosition: `${
+                backgroundIndex === 0 ? "center" : "center 5%"
+              }`,
               backgroundRepeat: "no-repeat",
             }}
           >
@@ -94,7 +96,6 @@ const SectionOne: React.FC = () => {
                         src={line.img}
                         alt="lines"
                         className={`absolute ${line.right} ${line.bottom}`}
-                        initial={{ opacity: 0, y: 100, scale: 1 }}
                         animate={{
                           opacity: 1,
                           y: [0, -20],
@@ -123,15 +124,18 @@ const SectionOne: React.FC = () => {
               className="top-0 right-0 absolute w-full h-full"
               style={{
                 backgroundImage: `
-      linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
-      linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+      linear-gradient(to top left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 10%),
+    linear-gradient(to bottom left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 10%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 10%),
       ${
         backgroundIndex === 0
           ? `url("/assets/home-2.png")`
           : `url("/assets/home-1.png")`
       }`,
-                backgroundSize: `${100 + progress / 4}%`,
-                backgroundPosition: "center",
+                backgroundSize: `${100 + progress / 12}%`,
+                backgroundPosition: `${
+                  backgroundIndex === 0 ? "center" : "center 16%"
+                }`,
                 backgroundRepeat: "no-repeat",
               }}
             ></div>
