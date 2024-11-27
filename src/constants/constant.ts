@@ -1,8 +1,8 @@
 export const Lines = [
   { id: 1, img: "/assets/green-lines/l-1.png", offset: "right-20" },
-  { id: 2, img: "/assets/green-lines/l-2.png", offset: "right-16" },
-  { id: 3, img: "/assets/green-lines/l-3.png", offset: "right-20" },
-  { id: 4, img: "/assets/green-lines/l-4.png", offset: "right-7" },
+  { id: 2, img: "/assets/green-lines/l-2.png", offset: "right-20" },
+  { id: 3, img: "/assets/green-lines/l-3.png", offset: "right-24" },
+  { id: 4, img: "/assets/green-lines/l-4.png", offset: "right-10" },
   { id: 5, img: "/assets/green-lines/l-5.png" },
   { id: 6, img: "/assets/green-lines/l-6.png" },
   { id: 7, img: "/assets/green-lines/l-7.png" },
@@ -20,8 +20,8 @@ export const Lines = [
 export const WhiteLines = [
   { id: 1, img: "/assets/white-lines/l-1.png", offset: "right-20" },
   { id: 2, img: "/assets/white-lines/l-2.png", offset: "right-16" },
-  { id: 3, img: "/assets/white-lines/l-3.png", offset: "right-20" },
-  { id: 4, img: "/assets/white-lines/l-4.png", offset: "right-7" },
+  { id: 3, img: "/assets/white-lines/l-3.png", offset: "right-24" },
+  { id: 4, img: "/assets/white-lines/l-4.png", offset: "right-10" },
   { id: 5, img: "/assets/white-lines/l-5.png" },
   { id: 6, img: "/assets/white-lines/l-6.png" },
   { id: 7, img: "/assets/white-lines/l-7.png" },

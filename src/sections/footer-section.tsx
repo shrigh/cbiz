@@ -9,8 +9,8 @@ import { Fade } from "react-awesome-reveal";
 
 const Footer: React.FC = () => {
   const WhiteLines = [
-    { id: 3, img: "/assets/white-lines/l-3.png", offset: "right-20" },
-    { id: 4, img: "/assets/white-lines/l-4.png", offset: "right-7" },
+    { id: 3, img: "/assets/white-lines/l-3.png", offset: "right-24" },
+    { id: 4, img: "/assets/white-lines/l-4.png", offset: "right-10" },
     { id: 5, img: "/assets/white-lines/l-5.png" },
     { id: 6, img: "/assets/white-lines/l-6.png" },
     { id: 7, img: "/assets/white-lines/l-7.png" },
@@ -46,13 +46,13 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Image Wrapping for Hover Effect */}
-          <div className="absolute top-0 w-1/2 right-0 h-full">
+          <div className="absolute top-0 right-0 h-full overflow-hidden w-1/2">
             {WhiteLines.map((line) => (
               <Fade key={line.id} triggerOnce>
                 <motion.img
                   src={line.img}
                   alt="lines.."
-                  className={`absolute ${line.offset} bottom-0 right-0 w-full`}
+                  className={`absolute ${line.offset} bottom-0 right-0 z-10`}
                 />
               </Fade>
             ))}

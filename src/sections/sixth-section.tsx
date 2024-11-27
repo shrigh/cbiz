@@ -69,7 +69,7 @@ const CardWithLines: React.FC<CardProps> = ({
       </Button>
       {/* Image Wrapping for Hover Effect */}
       <div
-        className="absolute top-0 left-0 w-full h-full"
+        className="absolute top-0 left-0 w-full h-full overflow-hidden"
         onMouseEnter={handleHoverStart}
         onMouseLeave={handleHoverEnd}
       >
@@ -95,7 +95,7 @@ const CardWithLines: React.FC<CardProps> = ({
                   },
                 },
               }}
-              className={`absolute ${line.offset} -bottom-5 w-full z-10 overflow-visible`}
+              className={`absolute ${line.offset} -bottom-5 right-0 z-10`}
             />
           </Fade>
         ))}
