@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
+import { cards } from "@/constants/constant";
 
 interface CardProps {
   title: string;
@@ -10,45 +11,6 @@ interface CardProps {
 }
 
 const FifthSection: React.FC = () => {
-  const cards = [
-    {
-      title: "Accounting",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: "/assets/accounting.jpg",
-    },
-    {
-      title: "Tax",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: "/assets/tax.jpg",
-    },
-    {
-      title: "Advisory",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: "/assets/advisory.jpg",
-    },
-    {
-      title: "Benefits",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: "/assets/benefits.jpg",
-    },
-    {
-      title: "Insurance",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: "/assets/insurance.jpg",
-    },
-    {
-      title: "Technology",
-      description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-      image: "/assets/h3.jpg",
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       <Fade triggerOnce={true}>
@@ -171,7 +133,7 @@ const Card = ({ title, image }: CardProps) => {
           quisquam assumenda libero non officiis dicta ut incidunt? Doloremque
           labore porro molestias est rem!
         </p>
-        <Button className="px-4 py-2 bg-[#04773B] hover:bg-[#035a2b] font-extralight">
+        <Button className="px-4 py-2 bg-[#04773B] hover:bg-[#04773B] font-light">
           Call to Action
         </Button>
       </div>

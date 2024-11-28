@@ -64,7 +64,7 @@ const CardWithLines: React.FC<CardProps> = ({
         {heading} <strong className="italic">{strongHeading}</strong>
       </h1>
       <p className="text-sm">{description}</p>
-      <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-20 relative font-extralight">
+      <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-20 relative">
         {buttonContent}
       </Button>
       {/* Image Wrapping for Hover Effect */}

@@ -129,21 +129,23 @@ const Card = ({ image, title }: CardProps) => {
         >
           <div
             className={`absolute left-[45%] z-20 self-center bg-[#04773B] w-10 h-10 rounded-full shadow-lg
-                 flex items-center justify-center ${
+                 flex items-center justify-center text-white ${
                    isGradientUp ? "-top-5" : "-bottom-5"
                  }`}
-          ></div>
-          {isGradientUp ? (
+          >
+            {isGradientUp ? <ChevronDown className="mt-4"/> : <ChevronUp className="mb-4"/>}
+          </div>
+          {/* {isGradientUp ? (
             <ChevronDown
               className={`text-white absolute left-[47%] self-center -bottom-1 z-40 ${
-                isGradientUp ? "-top-[96%]" : "-bottom-5"
+                isGradientUp ? "" : "-bottom-5"
               }`}
             />
           ) : (
             <ChevronUp
               className={`text-white absolute left-[47%] self-center -bottom-1 z-40 `}
             />
-          )}
+          )} */}
         </motion.div>
       </div>
     </motion.div>

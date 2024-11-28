@@ -67,7 +67,7 @@ const SectionOne: React.FC = () => {
               progress === 0 ? "duration-0" : "duration-1000"
             }`}
             style={{
-              backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 20%),
+              backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
                        linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
                        ${
                          backgroundIndex === 0
@@ -83,12 +83,12 @@ const SectionOne: React.FC = () => {
           >
             {/* Main content */}
             <div
-              className={`h-full transition-all ${
+              className={`h-full w-full relative overflow-hidden transition-all ${
                 progress === 0 ? "duration-0" : "duration-1000"
               }`}
             >
-              <div className="overflow-hidden absolute bottom-0 w-full h-full">
-                <div className="w-full h-full">
+              <div className="absolute bottom-0 w-full h-full">
+                <div className="relative w-full h-full">
                   {HomeLines.map((line, index) => (
                     <Fade key={line.id} delay={index * 300} triggerOnce>
                       <motion.img
@@ -144,7 +144,7 @@ const SectionOne: React.FC = () => {
         <div className="absolute bottom-12 px-[8.5rem] w-full py-2">
           <div className="flex justify-between items-center font-extralight w-full">
             <div>
-              <div className="w-full h-1 rounded-full overflow-hidden">
+              <div className="w-full h-[3px] overflow-hidden">
                 {backgroundIndex === 0 && (
                   <div
                     className="h-full bg-blue-500 rounded-full"
@@ -155,10 +155,12 @@ const SectionOne: React.FC = () => {
                   ></div>
                 )}
               </div>
-              <span>Lorem Ipsum Nonumy</span>
+              <span className={`${backgroundIndex === 0 ? "font-medium" : ""}`}>
+                Lorem Ipsum Nonumy
+              </span>
             </div>
             <div>
-              <div className="w-full h-1 rounded-full overflow-hidden">
+              <div className="w-full h-[3px] overflow-hidden">
                 {backgroundIndex === 1 && (
                   <div
                     className="h-full bg-blue-500 rounded-full"
@@ -169,7 +171,9 @@ const SectionOne: React.FC = () => {
                   ></div>
                 )}
               </div>
-              <span>Lorem Ipsum Dolor</span>
+              <span className={`${backgroundIndex === 1 ? "font-medium" : ""}`}>
+                Lorem Ipsum Dolor
+              </span>
             </div>
             <div>
               <span>Lorem Ipsum Set Amet</span>

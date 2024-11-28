@@ -128,3 +128,75 @@ export const HomeLines: any[] = [
     bottom: "bottom-0",
   },
 ];
+
+export const cards = [
+  {
+    title: "Accounting",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
+    image: "/assets/accounting.jpg",
+  },
+  {
+    title: "Tax",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
+    image: "/assets/tax.jpg",
+  },
+  {
+    title: "Advisory",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
+    image: "/assets/advisory.jpg",
+  },
+  {
+    title: "Benefits",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
+    image: "/assets/benefits.jpg",
+  },
+  {
+    title: "Insurance",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
+    image: "/assets/insurance.jpg",
+  },
+  {
+    title: "Technology",
+    description:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
+    image: "/assets/h3.jpg",
+  },
+];
+
+export const articles = [
+  {
+    id: 1,
+    type: "PRESS RELEASE",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor.",
+    image: "/assets/img5.jpg",
+  },
+  {
+    id: 2,
+    type: "REPORT",
+    title: "Lorem ipsum dolor sit amet, on diam etur elitr.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/assets/img4.jpg",
+  },
+  {
+    id: 3,
+    type: "WHITEPAPER",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/assets/img2.jpg",
+  },
+  {
+    id: 4,
+    type: "PRESS RELEASE",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor.",
+    image: "/assets/img1.jpg",
+  },
+];

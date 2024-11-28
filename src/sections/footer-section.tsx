@@ -15,6 +15,8 @@ const Footer: React.FC = () => {
     { id: 6, img: "/assets/white-lines/l-6.png" },
     { id: 7, img: "/assets/white-lines/l-7.png" },
     { id: 8, img: "/assets/white-lines/l-8.png" },
+    { id: 9, img: "/assets/white-lines/l-9.png" },
+    { id: 10, img: "/assets/white-lines/l-10.png" },
   ];
 
   return (
@@ -31,7 +33,7 @@ const Footer: React.FC = () => {
             </div>
             <Button
               className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
-  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full"
+  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full z-40"
             >
               <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
                 Contact Us
@@ -46,13 +48,13 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Image Wrapping for Hover Effect */}
-          <div className="absolute top-0 right-0 h-full overflow-hidden w-1/2">
+          <div className="absolute top-0 right-0 h-full overflow-visible w-1/2">
             {WhiteLines.map((line) => (
               <Fade key={line.id} triggerOnce>
                 <motion.img
                   src={line.img}
                   alt="lines.."
-                  className={`absolute ${line.offset} bottom-0 right-0 z-10`}
+                  className={`absolute ${line.offset} bottom-2.5 right-0 z-10`}
                 />
               </Fade>
             ))}
