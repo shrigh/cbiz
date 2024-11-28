@@ -141,7 +141,7 @@ const SectionOne: React.FC = () => {
             ></div>
           </div>
         </div>
-        <div className="absolute px-[8.5rem] w-full py-2">
+        <div className="absolute bottom-12 px-[8.5rem] w-full py-2">
           <div className="flex justify-between items-center font-extralight w-full">
             <div>
               <div className="w-full h-1 rounded-full overflow-hidden">
