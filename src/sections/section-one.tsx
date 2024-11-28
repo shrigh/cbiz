@@ -12,7 +12,7 @@ const SectionOne: React.FC = () => {
     // Simulate loader progress
     const progressInterval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 1 : 0));
-    }, 40);
+    }, 45);
 
     if (progress === 100) {
       setProgress(0);
@@ -74,7 +74,7 @@ const SectionOne: React.FC = () => {
                            ? `url("/assets/h1.png")`
                            : `url("/assets/h2.png")`
                        }`,
-              backgroundSize: `${100 + progress / 2}%`,
+              backgroundSize: `${100 + progress / 2.6}%`,
               backgroundPosition: `${
                 backgroundIndex === 0 ? "center" : "center 5%"
               }`,
