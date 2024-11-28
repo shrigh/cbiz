@@ -37,46 +37,40 @@ export const WhiteLines = [
 ];
 
 export const HomeLines: any[] = [
-  // {
-  //   id: 1,
-  //   img: "/assets/home-page-lines/Vector.png",
-  //   right: "right-[24.5rem]",
-  //   bottom: "-bottom-2",
-  // },
   {
     id: 2,
     img: "/assets/home-page-lines/Vector (1).png",
-    right: "right-[19.1rem]",
+    right: "right-[19rem]",
     bottom: "-bottom-[0.5rem]",
   },
   {
     id: 3,
     img: "/assets/home-page-lines/Vector (2).png",
-    right: "right-[16.2rem]",
+    right: "right-[16rem]",
     bottom: "-bottom-[3rem]",
   },
   {
     id: 4,
     img: "/assets/home-page-lines/Vector (3).png",
-    right: "right-[13.2rem]",
+    right: "right-[13rem]",
     bottom: "-bottom-[5.5rem]",
   },
   {
     id: 5,
     img: "/assets/home-page-lines/Vector (4).png",
-    right: "right-[10.2rem]",
+    right: "right-[10rem]",
     bottom: "-bottom-[8rem]",
   },
   {
     id: 6,
     img: "/assets/home-page-lines/Vector (5).png",
-    right: "right-[7.15rem]",
+    right: "right-[7rem]",
     bottom: "-bottom-[9rem]",
   },
   {
     id: 7,
     img: "/assets/home-page-lines/Vector (6).png",
-    right: "right-[4.2rem]",
+    right: "right-[4rem]",
     bottom: "-bottom-[9.5rem]",
   },
   {
