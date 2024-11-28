@@ -124,8 +124,8 @@ const SectionOne: React.FC = () => {
               className="top-0 right-0 absolute w-full h-full"
               style={{
                 backgroundImage: `
-     linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 20%),
-                       linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 20%),
+     linear-gradient(to right, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 20%),
+                       linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
    
       ${
         backgroundIndex === 0

@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="footer-gradient pt-12">
+        <div className="footer-gradient pt-12 pb-4">
           <div className="w-5/6 mx-auto px-4">
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 text-sm">
               <div>
