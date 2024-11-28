@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
             <section className="border-b bg-white">
               <div className="w-5/6 h-12 m-auto flex space-x-10 justify-end items-center text-sm font-light text-[#001242]">
                 <div className="flex gap-x-2 items-center">
-                  <img src="/assets/phone.png" alt="loading.." />
+                  <img src="/assets/phone.webp" alt="loading.." />
                   <span className="">800.123.4567</span>
                 </div>
                 <span className="cursor-pointer">Pay Bill</span>
@@ -23,11 +23,11 @@ const Navbar: React.FC = () => {
                 <span className="cursor-pointer">Events</span>
                 <span className="cursor-pointer">Locations</span>
                 <div className="flex gap-x-1 items-center">
-                  <img src="/assets/user.png" alt="user.." />
+                  <img src="/assets/user.webp" alt="user.." />
                   <span className="">Log In</span>
                 </div>
                 <div className="">
-                  <img src="/assets/search.png" alt="search.." />
+                  <img src="/assets/search.webp" alt="search.." />
                 </div>
               </div>
             </section>
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
             <section className="bg-white">
               <div className="flex justify-between items-center w-5/6 m-auto h-16 text-[#001242]">
                 <div className="w-28">
-                  <img src="/assets/cbig-logo.png" alt="logo.." />
+                  <img src="/assets/cbig-logo.webp" alt="logo.." />
                 </div>
                 <div className="flex space-x-10 items-center">
                   <span className="cursor-pointer">Services</span>
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                   <div className="text-sm flex items-center gap-x-2">
                     <span>Call to Action</span>
                     <img
-                      src="/assets/polygon.png"
+                      src="/assets/polygon.webp"
                       alt="polygon.."
                       className="cursor-pointer"
                     />

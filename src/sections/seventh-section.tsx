@@ -36,15 +36,15 @@ const SeventhSection: React.FC = () => {
 
         <div className="flex gap-6">
           <Card
-            image="/assets/img1.jpg"
+            image="/assets/img1.webp"
             title="Lorem Ipsum Dolor Case Study Title"
           />
           <Card
-            image="/assets/c1.jpg"
+            image="/assets/c1.webp"
             title="Lorem Ipsum Dolor Case Study Title"
           />
           <Card
-            image="/assets/c2.jpg"
+            image="/assets/c2.webp"
             title="Lorem Ipsum Dolor Case Study Title"
           />
         </div>
@@ -105,11 +105,11 @@ const Card = ({ image, title }: CardProps) => {
         </p>
         <div className="flex items-center gap-x-2 text-sm font-medium absolute bottom-6">
           <span>View Full Case Study</span>
-          <img src="/assets/white-polygon.png" alt="loading.." />
+          <img src="/assets/white-polygon.webp" alt="loading.." />
         </div>
         <div className="absolute right-0 -bottom-28">
           <img
-            src="/assets/Group.png"
+            src="/assets/Group.webp"
             alt="lines.."
             className="w-[600px] h-[400px] object-cover"
           />

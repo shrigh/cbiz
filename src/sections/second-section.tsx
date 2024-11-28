@@ -30,12 +30,12 @@ const SecondSection: React.FC = () => {
               </p>
               <Button
                 className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
-  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full font-extralight"
+  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full font-light"
               >
                 <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
                   Call to Action
                   <img
-                    src="/assets/ellipse.png"
+                    src="/assets/ellipse.webp"
                     alt="ellipse.."
                     className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
                   />
@@ -63,13 +63,13 @@ const SecondSection: React.FC = () => {
               {/* Image */}
               <div className="relative">
                 <img
-                  src="/assets/h3.jpg"
+                  src="/assets/h3.webp"
                   alt="image.."
                   className="rounded-l-lg object-cover"
                 />
                 {/* Play Button */}
                 <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-                  <img src="/assets/play-button.png" alt="playButton.." />
+                  <img src="/assets/play-button.webp" alt="playButton.." />
                 </div>
               </div>
             </motion.div>

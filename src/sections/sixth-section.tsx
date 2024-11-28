@@ -71,7 +71,7 @@ const CardWithLines: React.FC<CardProps> = ({
         <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
           {buttonContent}
           <img
-            src="/assets/ellipse.png"
+            src="/assets/ellipse.webp"
             alt="ellipse.."
             className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
           />

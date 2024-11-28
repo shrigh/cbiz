@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
                 Contact Us
                 <img
-                  src="/assets/ellipse.png"
+                  src="/assets/ellipse.webp"
                   alt="ellipse.."
                   className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
                 />
@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
 
             <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
               <div className="text-center space-y-2">
-                <img src="/assets/logo.png" alt="logo.." />
+                <img src="/assets/logo.webp" alt="logo.." />
                 <p className="text-xs mt-2">©2024 CBIZ. All Rights Reserved.</p>
               </div>
 

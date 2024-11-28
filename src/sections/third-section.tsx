@@ -10,7 +10,7 @@ const ThirdSection: React.FC = () => {
             {/* Image */}
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img
-                src="/assets/image1.jpg"
+                src="/assets/image1.webp"
                 alt="Group discussion"
                 className="w-full h-80 object-cover"
               />
@@ -35,7 +35,7 @@ const ThirdSection: React.FC = () => {
               <ul className="space-y-2 text-[#575C5F]">
                 <li className="flex items-start gap-4">
                   <img
-                    src="/assets/tick.png"
+                    src="/assets/tick.webp"
                     alt="tick.."
                     className="w-3 h-3 mt-1.5"
                   />
@@ -45,7 +45,7 @@ const ThirdSection: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-4">
                   <img
-                    src="/assets/tick.png"
+                    src="/assets/tick.webp"
                     alt="tick.."
                     className="w-3 h-3 mt-1.5"
                   />
@@ -63,7 +63,7 @@ const ThirdSection: React.FC = () => {
                   <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
                     learn More
                     <img
-                      src="/assets/ellipse.png"
+                      src="/assets/ellipse.webp"
                       alt="ellipse.."
                       className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
                     />
@@ -74,7 +74,7 @@ const ThirdSection: React.FC = () => {
                   <span className="text-sm font-medium text-[#001242]">
                     Call to Action
                   </span>
-                  <img src="/assets/polygon2.png" alt="loading.." />
+                  <img src="/assets/polygon2.webp" alt="loading.." />
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ const ThirdSection: React.FC = () => {
               <ul className="space-y-2 text-[#575C5F]">
                 <li className="flex items-start gap-4">
                   <img
-                    src="/assets/tick.png"
+                    src="/assets/tick.webp"
                     alt="tick.."
                     className="w-3 h-3 mt-1.5"
                   />
@@ -111,7 +111,7 @@ const ThirdSection: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-4">
                   <img
-                    src="/assets/tick.png"
+                    src="/assets/tick.webp"
                     alt="tick.."
                     className="w-3 h-3 mt-1.5"
                   />
@@ -129,7 +129,7 @@ const ThirdSection: React.FC = () => {
                   <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
                     learn More
                     <img
-                      src="/assets/ellipse.png"
+                      src="/assets/ellipse.webp"
                       alt="ellipse.."
                       className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
                     />
@@ -141,7 +141,7 @@ const ThirdSection: React.FC = () => {
                   <span className="text-sm font-medium text-[#001242]">
                     Call to Action
                   </span>
-                  <img src="/assets/polygon2.png" alt="loading.." />
+                  <img src="/assets/polygon2.webp" alt="loading.." />
                 </div>
               </div>
             </div>
@@ -149,13 +149,13 @@ const ThirdSection: React.FC = () => {
             {/* Image with Play Button */}
             <div className="relative">
               <img
-                src="/assets/c1.jpg"
+                src="/assets/c1.webp"
                 alt="Businessman"
                 className="rounded-lg w-full h-80 shadow-md object-cover"
               />
               {/* Play Button */}
               <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer w-14">
-                <img src="/assets/play-button.png" alt="playButton.." />
+                <img src="/assets/play-button.webp" alt="playButton.." />
               </div>
             </div>
           </div>

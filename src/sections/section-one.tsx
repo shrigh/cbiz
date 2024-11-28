@@ -43,10 +43,10 @@ const SectionOne: React.FC = () => {
                   className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
   gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full"
                 >
-                  <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full font-extralight">
+                  <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full font-light">
                     About CBIZ
                     <img
-                      src="/assets/ellipse.png"
+                      src="/assets/ellipse.webp"
                       alt="ellipse.."
                       className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
                     />
@@ -56,7 +56,7 @@ const SectionOne: React.FC = () => {
 
                 <div className="flex items-center gap-x-2 text-sm cursor-pointer hover:bg-slate-100 px-4 rounded-full">
                   <span className="font-medium">Call to Action</span>
-                  <img src="/assets/polygon2.png" alt="action.." />
+                  <img src="/assets/polygon2.webp" alt="action.." />
                 </div>
               </div>
             </div>
@@ -70,8 +70,8 @@ const SectionOne: React.FC = () => {
                        linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
                        ${
                          backgroundIndex === 0
-                           ? `url("/assets/h1.png")`
-                           : `url("/assets/h2.png")`
+                           ? `url("/assets/h1.webp")`
+                           : `url("/assets/h2.webp")`
                        }`,
               backgroundSize: `${100 + progress / 2.6}%`,
               backgroundPosition: "center",
@@ -123,8 +123,8 @@ const SectionOne: React.FC = () => {
       linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 2%),
       ${
         backgroundIndex === 0
-          ? `url("/assets/home-2.png")`
-          : `url("/assets/home-1.png")`
+          ? `url("/assets/home-2.webp")`
+          : `url("/assets/home-1.webp")`
       }`,
                 backgroundSize: `${100 + progress / 8}%`,
                 backgroundPosition: "center",

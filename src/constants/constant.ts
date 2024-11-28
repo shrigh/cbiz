@@ -107,37 +107,37 @@ export const cards = [
     title: "Accounting",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-    image: "/assets/accounting.jpg",
+    image: "/assets/accounting.webp",
   },
   {
     title: "Tax",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-    image: "/assets/tax.jpg",
+    image: "/assets/tax.webp",
   },
   {
     title: "Advisory",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-    image: "/assets/advisory.jpg",
+    image: "/assets/advisory.webp",
   },
   {
     title: "Benefits",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-    image: "/assets/benefits.jpg",
+    image: "/assets/benefits.webp",
   },
   {
     title: "Insurance",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-    image: "/assets/insurance.jpg",
+    image: "/assets/insurance.webp",
   },
   {
     title: "Technology",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-    image: "/assets/h3.jpg",
+    image: "/assets/h3.webp",
   },
 ];
 
@@ -148,21 +148,21 @@ export const articles = [
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor.",
-    image: "/assets/img5.jpg",
+    image: "/assets/img5.webp",
   },
   {
     id: 2,
     type: "REPORT",
     title: "Lorem ipsum dolor sit amet, on diam etur elitr.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: "/assets/img4.jpg",
+    image: "/assets/img4.webp",
   },
   {
     id: 3,
     type: "WHITEPAPER",
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: "/assets/img2.jpg",
+    image: "/assets/img2.webp",
   },
   {
     id: 4,
@@ -170,6 +170,6 @@ export const articles = [
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor.",
-    image: "/assets/img1.jpg",
+    image: "/assets/img1.webp",
   },
 ];

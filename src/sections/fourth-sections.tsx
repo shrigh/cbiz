@@ -44,7 +44,7 @@ const FourthSection: React.FC = () => {
             <div className="w-3/3">
               <div className="overflow-hidden">
                 <img
-                  src="/assets/img6.jpg"
+                  src="/assets/img6.webp"
                   alt="Main Article"
                   className="w-full h-[400px] object-cover rounded-xl shadow-md"
                   loading="lazy"
