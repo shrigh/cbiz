@@ -37,89 +37,68 @@ export const WhiteLines = [
 ];
 
 export const HomeLines: any[] = [
-  {
-    id: 2,
-    img: "/assets/home-page-lines/Vector (1).png",
-    right: "right-[19rem]",
-    bottom: "-bottom-[0.5rem]",
-  },
-  {
-    id: 3,
-    img: "/assets/home-page-lines/Vector (2).png",
-    right: "right-[16rem]",
-    bottom: "-bottom-[3rem]",
-  },
-  {
-    id: 4,
-    img: "/assets/home-page-lines/Vector (3).png",
-    right: "right-[13rem]",
-    bottom: "-bottom-[5.5rem]",
-  },
-  {
-    id: 5,
-    img: "/assets/home-page-lines/Vector (4).png",
-    right: "right-[10rem]",
-    bottom: "-bottom-[8rem]",
-  },
-  {
-    id: 6,
-    img: "/assets/home-page-lines/Vector (5).png",
-    right: "right-[7rem]",
-    bottom: "-bottom-[9rem]",
-  },
-  {
-    id: 7,
-    img: "/assets/home-page-lines/Vector (6).png",
-    right: "right-[4rem]",
-    bottom: "-bottom-[9.5rem]",
-  },
-  {
-    id: 8,
-    img: "/assets/home-page-lines/Vector (7).png",
-    right: "right-[1.2rem]",
-    bottom: "-bottom-[9.5rem]",
-  },
-  {
-    id: 9,
-    img: "/assets/home-page-lines/Vector (8).png",
-    right: "right-0",
-    bottom: "-bottom-[6.5rem]",
-  },
-  {
-    id: 10,
-    img: "/assets/home-page-lines/Vector (9).png",
-    right: "right-0",
-    bottom: "-bottom-[4.2rem]",
-  },
+  // {
+  //   id: 1,
+  //   img: "/assets/home-page-lines/Vector.png",
+  // },
+  // {
+  //   id: 2,
+  //   img: "/assets/home-page-lines/Vector (1).png",
+  // },
+  // {
+  //   id: 3,
+  //   img: "/assets/home-page-lines/Vector (2).png",
+  // },
+  // {
+  //   id: 4,
+  //   img: "/assets/home-page-lines/Vector (3).png",
+  // },
+  // {
+  //   id: 5,
+  //   img: "/assets/home-page-lines/Vector (4).png",
+  // },
+  // {
+  //   id: 6,
+  //   img: "/assets/home-page-lines/Vector (5).png",
+  // },
+  // {
+  //   id: 7,
+  //   img: "/assets/home-page-lines/Vector (6).png",
+  // },
+  // {
+  //   id: 8,
+  //   img: "/assets/home-page-lines/Vector (7).png",
+  // },
+  // {
+  //   id: 9,
+  //   img: "/assets/home-page-lines/Vector (8).png",
+  // },
+  // {
+  //   id: 10,
+  //   img: "/assets/home-page-lines/Vector (9).png",
+  //   offset:"-bottom-[3%]"
+  // },
   {
     id: 11,
     img: "/assets/home-page-lines/Vector (10).png",
-    right: "right-0",
-    bottom: "-bottom-9",
+    offset:"-bottom-[11.5%]"
   },
   {
     id: 12,
     img: "/assets/home-page-lines/Vector (11).png",
-    right: "right-0",
-    bottom: "-bottom-[0.45rem]",
+    offset:"-bottom-7"
   },
   {
     id: 13,
     img: "/assets/home-page-lines/Vector (12).png",
-    right: "right-0",
-    bottom: "bottom-[0rem]",
   },
   {
     id: 14,
     img: "/assets/home-page-lines/Vector (13).png",
-    right: "right-0",
-    bottom: "bottom-0",
   },
   {
     id: 15,
     img: "/assets/home-page-lines/Vector (14).png",
-    right: "right-0",
-    bottom: "bottom-0",
   },
 ];
 

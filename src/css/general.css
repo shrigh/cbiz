@@ -38,7 +38,7 @@
   background: linear-gradient(180deg, #001242 0%, #004775 211.41%);
 }
 .custom-height {
-  height: calc(100vh - 15rem);
+  height: calc(100vh - 14rem);
 }
 
 .line-clamp-14 {

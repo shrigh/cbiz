@@ -64,8 +64,19 @@ const CardWithLines: React.FC<CardProps> = ({
         {heading} <strong className="italic">{strongHeading}</strong>
       </h1>
       <p className="text-sm">{description}</p>
-      <Button className="h-9 bg-[#04773B] hover:bg-[#04773B] z-20 relative">
-        {buttonContent}
+      <Button
+        className="custom-button relative bg-[#04773B] hover:bg-white hover:text-black text-white flex items-center justify-center
+  gap-x-2 border border-transparent overflow-hidden group w-36 h-10 transition-all duration-300 rounded-md hover:rounded-full font-light"
+      >
+        <span className="relative z-40 flex items-center justify-center gap-x-2 w-full h-full">
+          {buttonContent}
+          <img
+            src="/assets/ellipse.png"
+            alt="ellipse.."
+            className="w-6 h-6 hidden transition-opacity duration-300 group-hover:block"
+          />
+        </span>
+        <div className="absolute inset-0 bg-[#04773B] transition-transform duration-500 transform translate-x-0 group-hover:translate-x-full"></div>
       </Button>
       {/* Image Wrapping for Hover Effect */}
       <div

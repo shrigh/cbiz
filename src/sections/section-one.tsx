@@ -74,73 +74,66 @@ const SectionOne: React.FC = () => {
                            : `url("/assets/h2.png")`
                        }`,
               backgroundSize: `${100 + progress / 2.6}%`,
-              backgroundPosition: `${
-                backgroundIndex === 0 ? "center" : "center 5%"
-              }`,
+              backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
           >
             {/* Main content */}
-            <div
-              className={`h-full w-full relative overflow-hidden transition-all ${
+            {/* <div
+              className={`h-[500px] relative overflow-hidden transition-all border-4 border-red-500 ${
                 progress === 0 ? "duration-0" : "duration-1000"
               }`}
             >
               <div className="absolute top-0 left-0 w-full h-full">
-                <div className="relative w-full h-full">
-                  {HomeLines.map((line, index) => (
-                    <Fade key={line.id} delay={index * 300} triggerOnce>
-                      <motion.img
-                        key={`${line.id}-${backgroundIndex}`}
-                        src={line.img}
-                        alt="lines"
-                        className={`absolute ${line.right} ${line.bottom} z-10`}
-                        animate={{
-                          opacity: 1,
-                          y: [0, -20],
-                          transition: {
-                            opacity: { delay: 0.2, duration: 0.3 },
-                            scale: { duration: 0.3 },
-                            type: "spring",
-                            stiffness: 300,
-                            damping: 15,
-                            duration: 0.3,
-                            y: {
-                              duration: 3,
-                              ease: "linear",
-                            },
+                {HomeLines.map((line, index) => (
+                  <Fade key={line.id} delay={index * 300} triggerOnce>
+                    <motion.img
+                      key={`${line.id}-${backgroundIndex}`}
+                      src={line.img}
+                      alt="lines"
+                      className={`absolute ${line.offset} -bottom-5 z-10`}
+                      animate={{
+                        opacity: 1,
+                        y: [0, 0],
+                        transition: {
+                          opacity: { delay: 0.2, duration: 0.3 },
+                          scale: { duration: 0.3 },
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 15,
+                          duration: 0.3,
+                          y: {
+                            duration: 3,
+                            ease: "linear",
                           },
-                        }}
-                      />
-                    </Fade>
-                  ))}
-                </div>
+                        },
+                      }}
+                    />
+                  </Fade>
+                ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Second div with background image */}
             <div
               className="top-0 right-0 absolute w-full h-full"
               style={{
                 backgroundImage: `
-     linear-gradient(to right, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 20%),
-                       linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%),
-   
+      linear-gradient(to right, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 20%),
+      linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 2%),
       ${
         backgroundIndex === 0
           ? `url("/assets/home-2.png")`
           : `url("/assets/home-1.png")`
       }`,
-                backgroundSize: `${100 + progress / 12}%`,
-                backgroundPosition: `${
-                  backgroundIndex === 0 ? "center" : "center 16%"
-                }`,
+                backgroundSize: `${100 + progress / 8}%`,
+                backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }}
             ></div>
           </div>
         </div>
-        <div className="absolute bottom-12 px-[8.5rem] w-full py-2">
+        <div className="absolute bottom-8 px-[8.5rem] w-full py-2">
           <div className="flex justify-between items-center font-extralight w-full">
             <div>
               <div className="w-full h-[3px] overflow-hidden">
