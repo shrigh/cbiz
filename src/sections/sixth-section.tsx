@@ -81,7 +81,7 @@ const CardWithLines: React.FC<CardProps> = ({
               alt="lines"
               animate={{
                 opacity: 1,
-                y: hovering ? [0, -20] : [0, 0],
+                y: hovering ? [0, -20] : [0, -20],
                 transition: {
                   opacity: { delay: 0.2, duration: 0.3 },
                   scale: { duration: 0.3 },

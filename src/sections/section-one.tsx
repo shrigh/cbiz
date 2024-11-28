@@ -71,8 +71,8 @@ const SectionOne: React.FC = () => {
                        linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
                        ${
                          backgroundIndex === 0
-                           ? `url("/assets/h1.jpg")`
-                           : `url("/assets/h2.jpg")`
+                           ? `url("/assets/h1.png")`
+                           : `url("/assets/h2.png")`
                        }`,
               backgroundSize: `${100 + progress / 2}%`,
               backgroundPosition: `${
