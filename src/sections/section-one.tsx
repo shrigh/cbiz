@@ -34,10 +34,9 @@ const SectionOne: React.FC = () => {
                 </strong>
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                impedit aliquid tenetur enim officia cum molestiae. Quidem,
-                molestias? Incidunt commodi sunt obcaecati impedit voluptatum!
-                Accusamus?
+                {backgroundIndex === 0
+                  ? "Aenean leo ligla, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus"
+                  : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua"}
               </p>
               <div className="btn flex space-x-2 pt-4">
                 <Button
@@ -125,7 +124,7 @@ const SectionOne: React.FC = () => {
               style={{
                 backgroundImage: `
      linear-gradient(to right, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 20%),
-                       linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
+                       linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%),
    
       ${
         backgroundIndex === 0
