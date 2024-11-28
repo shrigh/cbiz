@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { HomeLines } from "@/constants/constant";
-import { Fade } from "react-awesome-reveal";
+// import { HomeLines } from "@/constants/constant";
+// import { Fade } from "react-awesome-reveal";
 
 const SectionOne: React.FC = () => {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
