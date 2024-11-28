@@ -67,8 +67,8 @@ const SectionOne: React.FC = () => {
               progress === 0 ? "duration-0" : "duration-1000"
             }`}
             style={{
-              backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
-                       linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+              backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 20%),
+                       linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
                        ${
                          backgroundIndex === 0
                            ? `url("/assets/h1.png")`
