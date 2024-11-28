@@ -87,7 +87,7 @@ const SectionOne: React.FC = () => {
                 progress === 0 ? "duration-0" : "duration-1000"
               }`}
             >
-              <div className="absolute bottom-0 w-full h-full">
+              <div className="absolute top-0 left-0 w-full h-full">
                 <div className="relative w-full h-full">
                   {HomeLines.map((line, index) => (
                     <Fade key={line.id} delay={index * 300} triggerOnce>
@@ -95,7 +95,7 @@ const SectionOne: React.FC = () => {
                         key={`${line.id}-${backgroundIndex}`}
                         src={line.img}
                         alt="lines"
-                        className={`absolute ${line.right} ${line.bottom}`}
+                        className={`absolute ${line.right} ${line.bottom} z-10`}
                         animate={{
                           opacity: 1,
                           y: [0, -20],
