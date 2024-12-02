@@ -84,34 +84,44 @@ const SectionOne: React.FC = () => {
                 progress === 0 ? "duration-0" : "duration-1000"
               }`}
             >
-              <div className="absolute top-0 left-0 w-full h-full opacity-40">
-                {HomeLines.map((line, index) => (
-                  <Fade key={line.id} delay={index * 300} triggerOnce>
-                    <motion.img
-                      key={`${line.id}-${backgroundIndex}`}
-                      src={line.img}
-                      alt="lines"
-                      className={`absolute ${line.offset} -bottom-16 -left-20 right-0`}
-                      animate={{
-                        opacity: 1,
-                        scale:2,
-                        y: [0, -20],
-                        transition: {
-                          opacity: { delay: 0.2, duration: 0.3 },
-                          scale: { duration: 0.3 },
-                          type: "spring",
-                          stiffness: 300,
-                          damping: 15,
-                          duration: 0.3,
-                          y: {
-                            duration: 3,
-                            ease: "linear",
+              <div className="absolute top-0 left-0 w-full h-full">
+                {HomeLines.map((line, index) => {
+                  // Calculate dynamic opacity
+                  const dynamicOpacity =
+                    index > 9 ? 1 - (index - 9) * 0.1 : 0.5 + index * 0.1;
+
+                  return (
+                    <Fade key={line.id} delay={index * 300} triggerOnce>
+                      <motion.img
+                        key={`${line.id}-${backgroundIndex}`}
+                        src={line.img}
+                        alt="lines"
+                        className={`absolute ${line.offset} -bottom-24 -left-20 right-0`}
+                        style={{
+                          filter:
+                            "brightness(0) saturate(100%) invert(29%) sepia(90%) saturate(542%) hue-rotate(85deg) brightness(96%) contrast(85%)",
+                        }}
+                        animate={{
+                          opacity: Math.max(dynamicOpacity, 0),
+                          scale: 2,
+                          y: [0, -30],
+                          transition: {
+                            opacity: { delay: 0.2, duration: 0.3 },
+                            scale: { duration: 0.3 },
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 15,
+                            duration: 0.3,
+                            y: {
+                              duration: 3,
+                              ease: "linear",
+                            },
                           },
-                        },
-                      }}
-                    />
-                  </Fade>
-                ))}
+                        }}
+                      />
+                    </Fade>
+                  );
+                })}
               </div>
             </div>
 
