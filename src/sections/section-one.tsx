@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-// import { HomeLines } from "@/constants/constant";
-// import { Fade } from "react-awesome-reveal";
+import { HomeLines } from "@/constants/constant";
+import { Fade } from "react-awesome-reveal";
 
 const SectionOne: React.FC = () => {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
@@ -79,22 +79,23 @@ const SectionOne: React.FC = () => {
             }}
           >
             {/* Main content */}
-            {/* <div
-              className={`h-[500px] relative overflow-hidden transition-all border-4 border-red-500 ${
+            <div
+              className={`h-full w-full relative overflow-hidden transition-all ${
                 progress === 0 ? "duration-0" : "duration-1000"
               }`}
             >
-              <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute top-0 left-0 w-full h-full opacity-40">
                 {HomeLines.map((line, index) => (
                   <Fade key={line.id} delay={index * 300} triggerOnce>
                     <motion.img
                       key={`${line.id}-${backgroundIndex}`}
                       src={line.img}
                       alt="lines"
-                      className={`absolute ${line.offset} -bottom-5 z-10`}
+                      className={`absolute ${line.offset} -bottom-16 -left-20 right-0`}
                       animate={{
                         opacity: 1,
-                        y: [0, 0],
+                        scale:2,
+                        y: [0, -20],
                         transition: {
                           opacity: { delay: 0.2, duration: 0.3 },
                           scale: { duration: 0.3 },
@@ -112,7 +113,7 @@ const SectionOne: React.FC = () => {
                   </Fade>
                 ))}
               </div>
-            </div> */}
+            </div>
 
             {/* Second div with background image */}
             <div
