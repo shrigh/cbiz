@@ -106,7 +106,7 @@ const SectionOne: React.FC = () => {
                           scale: 3,
                           y: [0, -30],
                           transition: {
-                            opacity: { delay: 0.3, duration: 0.3 },
+                            opacity: { delay: 0.4, duration: 0.3 },
                             scale: { duration: 0.3 },
                             type: "spring",
                             stiffness: 300,
