@@ -88,7 +88,7 @@ const SectionOne: React.FC = () => {
                 {HomeLines.map((line, index) => {
                   // Calculate dynamic opacity
                   const dynamicOpacity =
-                    index > 9 ? 1 - (index - 9) * 0.1 : 0.5 + index * 0.1;
+                    index > 9 ? 1 - (index - 9) * 0.22 : 0.5 + index * 0.1;
 
                   return (
                     <Fade key={line.id} delay={index * 300} triggerOnce>
@@ -96,17 +96,17 @@ const SectionOne: React.FC = () => {
                         key={`${line.id}-${backgroundIndex}`}
                         src={line.img}
                         alt="lines"
-                        className={`absolute ${line.offset} -bottom-32 -left-28`}
+                        className={`absolute ${line.offset} -left-60`}
                         style={{
                           filter:
                             "brightness(0) saturate(100%) invert(29%) sepia(90%) saturate(542%) hue-rotate(85deg) brightness(96%) contrast(85%)",
                         }}
                         animate={{
                           opacity: Math.max(dynamicOpacity, 0),
-                          scale: 2,
+                          scale: 3,
                           y: [0, -30],
                           transition: {
-                            opacity: { delay: 0.2, duration: 0.3 },
+                            opacity: { delay: 0.3, duration: 0.3 },
                             scale: { duration: 0.3 },
                             type: "spring",
                             stiffness: 300,
