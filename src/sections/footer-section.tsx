@@ -55,10 +55,10 @@ const Footer: React.FC = () => {
                 <motion.img
                   src={line.img}
                   alt="lines.."
-                  className={`absolute ${line.offset} -left-32 z-10`}
+                  className={`absolute ${line.offset} -left-48 z-10`}
                   style={{
                     filter: "invert(1) brightness(2)",
-                    transform: "scale(2.5)",
+                    transform: "scale(3)",
                     opacity:
                       index > 9 ? 1 - (index - 9) * 0.22 : 0.5 + index * 0.1,
                   }}

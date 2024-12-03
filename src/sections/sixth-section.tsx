@@ -96,7 +96,7 @@ const CardWithLines: React.FC<CardProps> = ({
                 alt="lines"
                 animate={{
                   opacity: Math.max(dynamicOpacity, 0),
-                  scale: 2.5,
+                  scale: 3,
                   y: hovering ? [0, -20] : [0, -20],
                   transition: {
                     opacity: { delay: 0.2, duration: 0.3 },
@@ -111,7 +111,7 @@ const CardWithLines: React.FC<CardProps> = ({
                     },
                   },
                 }}
-                className={`absolute -left-24 z-10`}
+                className={`absolute -left-32 z-10`}
                 style={
                   strongHeading === "Careers"
                     ? {
