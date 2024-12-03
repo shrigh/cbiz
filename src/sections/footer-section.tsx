@@ -9,21 +9,11 @@ import { Fade } from "react-awesome-reveal";
 import { HomeLines } from "@/constants/constant";
 
 const Footer: React.FC = () => {
-  const WhiteLines = [
-    { id: 3, img: "/assets/white-lines/l-3.png", offset: "right-24" },
-    { id: 4, img: "/assets/white-lines/l-4.png", offset: "right-10" },
-    { id: 5, img: "/assets/white-lines/l-5.png" },
-    { id: 6, img: "/assets/white-lines/l-6.png" },
-    { id: 7, img: "/assets/white-lines/l-7.png" },
-    { id: 8, img: "/assets/white-lines/l-8.png" },
-    { id: 9, img: "/assets/white-lines/l-9.png" },
-    { id: 10, img: "/assets/white-lines/l-10.png" },
-  ];
 
   return (
     <Fade delay={300} triggerOnce>
       <div className="font-extralight text-white">
-        <div className="space-y-3 px-32 py-20 second-gradient text-white relative overflow-hidden h-[217px] border">
+        <div className="space-y-3 px-32 py-20 second-gradient text-white relative overflow-hidden h-[217px]">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-3xl">Full Width CTA</h1>

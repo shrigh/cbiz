@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
-import { Lines, WhiteLines, HomeLines } from "../constants/constant";
+import { HomeLines } from "../constants/constant";
 
 interface CardProps {
   heading: string;
