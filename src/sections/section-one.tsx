@@ -96,7 +96,7 @@ const SectionOne: React.FC = () => {
                         key={`${line.id}-${backgroundIndex}`}
                         src={line.img}
                         alt="lines"
-                        className={`absolute ${line.offset} -bottom-24 -left-20 right-0`}
+                        className={`absolute ${line.offset} -bottom-32 -left-28`}
                         style={{
                           filter:
                             "brightness(0) saturate(100%) invert(29%) sepia(90%) saturate(542%) hue-rotate(85deg) brightness(96%) contrast(85%)",
