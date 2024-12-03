@@ -6,6 +6,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { BsTwitterX } from "react-icons/bs";
 import { Fade } from "react-awesome-reveal";
+import { HomeLines } from "@/constants/constant";
 
 const Footer: React.FC = () => {
   const WhiteLines = [
@@ -22,7 +23,7 @@ const Footer: React.FC = () => {
   return (
     <Fade delay={300} triggerOnce>
       <div className="font-extralight text-white">
-        <div className="space-y-3 px-32 py-20 second-gradient text-white relative overflow-hidden h-[217px]">
+        <div className="space-y-3 px-32 py-20 second-gradient text-white relative overflow-hidden h-[217px] border">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-3xl">Full Width CTA</h1>
@@ -49,12 +50,18 @@ const Footer: React.FC = () => {
 
           {/* Image Wrapping for Hover Effect */}
           <div className="absolute top-0 right-0 h-full overflow-visible w-1/2">
-            {WhiteLines.map((line) => (
+            {HomeLines.map((line, index) => (
               <Fade key={line.id} triggerOnce>
                 <motion.img
                   src={line.img}
                   alt="lines.."
-                  className={`absolute ${line.offset} bottom-2.5 right-0 z-10`}
+                  className={`absolute ${line.offset} -left-32 z-10`}
+                  style={{
+                    filter: "invert(1) brightness(2)",
+                    transform: "scale(2.5)",
+                    opacity:
+                      index > 9 ? 1 - (index - 9) * 0.22 : 0.5 + index * 0.1,
+                  }}
                 />
               </Fade>
             ))}

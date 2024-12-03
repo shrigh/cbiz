@@ -86,7 +86,6 @@ const SectionOne: React.FC = () => {
             >
               <div className="absolute top-0 left-0 w-full h-full">
                 {HomeLines.map((line, index) => {
-                  // Calculate dynamic opacity
                   const dynamicOpacity =
                     index > 9 ? 1 - (index - 9) * 0.22 : 0.5 + index * 0.1;
 
